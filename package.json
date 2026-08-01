@@ -1,0 +1,15 @@
+{
+  "name": "build",
+  "version": "3.8.0",
+  "private": true,
+  "scripts": {
+    "tauri:build": "tauri build",
+    "tauri:dmg": "tauri build --bundles dmg",
+    "tauri:dmg:arm64": "tauri build --bundles dmg --target aarch64-apple-darwin",
+    "tauri:dmg:x64": "tauri build --bundles dmg --target x86_64-apple-darwin",
+    "tauri:dmg:universal": "tauri build --bundles dmg --target universal-apple-darwin"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.9.4"
+  }
+}

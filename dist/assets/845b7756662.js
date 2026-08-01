@@ -1,0 +1,1 @@
+const i={yingshe:{miaoheyue:"Opsyen",miaoheyuejiaoyi:"Perdagangan opsyen"},jiaoyi:{yujikuisun:"Kerugian",yujiyingli:"Keuntungan",yuguyingkuie:"Jumlah Untung/Rugi",yuqiyingkuilv:"Kadar Untung/Rugi"}};export{i as default};

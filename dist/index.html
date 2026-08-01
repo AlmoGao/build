@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="" style="overflow: hidden">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="renderer" content="webkit" />
+
+  <!-- SEO -->
+  <title>ExDemo | bosss.club</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+
+  <!-- Mobile -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <!-- Open Graph (Facebook/LinkedIn 等) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ExDemo" />
+  <meta property="og:title" content="ExDemo" />
+  <meta property="og:description" content="" />
+  <meta property="og:image"
+    content="https://www.bosss.club/main/apple-touch-icon.png?v=3.11.13" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="720" />
+  <meta property="og:url" content="https://www.bosss.club" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ExDemo" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image"
+    content="https://www.bosss.club/main/apple-touch-icon.png?v=3.11.13" />
+  <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
+
+  <!-- ico -->
+  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=3.11.13">
+  <link rel="icon" href="/main/favicon.ico" />
+  <link rel="canonical" href="https://www.bosss.club" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CryptoExchange",
+    "name": "ExDemo",
+    "url": "https://www.bosss.club",
+    "description": "",
+    "logo": "/main/logo.png",
+    "sameAs": [
+      "https://twitter.com/",
+      "https://www.linkedin.com/",
+      "https://www.facebook.com/"
+    ],
+    "founder": {
+      "@type": "Organization",
+      "name": "ExDemo"
+    },
+    "acceptedPaymentMethod": ["CryptoCurrency", "BankTransfer"],
+    "currenciesAccepted": ["BTC", "ETH", "USDT", "USDC"],
+    "category": [
+      "crypto exchange",
+      "bitcoin trading",
+      "ethereum trading",
+      "digital asset broker",
+      "binance alternative",
+      "okx alternative",
+      "bybit alternative"
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      var envCode = 'main'
+      if (['rwa_283'].includes(envCode)) {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+          viewport.setAttribute(
+            'content',
+            'width=1460'
+          );
+        }
+        return
+      }
+      if (
+        ['main'].includes(envCode) ||
+        /mode\d+$/.test(envCode)
+      ) {
+        return
+      }
+      var ua = navigator.userAgent.toLowerCase();
+      var isMobile = /iphone|ipad|ipod|android|mobile/i.test(ua);
+      if (isMobile) {
+        const url = location.origin
+        const match = url.match(/^(\w+:\/\/)([^/]+)$/);
+        if (!match) return url;
+        const protocol = match[1];
+        const host = match[2];
+        const parts = host.split('.');
+        if (parts.length > 2) {
+          parts[0] = 'h5';
+        } else {
+          parts.unshift('h5');
+        }
+        parts.shift()
+        if (location.href.includes('?')) {
+          window.location.href = protocol + parts.join('.') + '?' + location.href.split('?')[1]
+        } else {
+          window.location.href = protocol + parts.join('.')
+        }
+      }
+    })();
+  </script>
+  <style>
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Light.woff2') format('woff2'), url('./static/fonts/BinancePlex-Light.otf') format('opentype');
+      font-weight: 200
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Light.woff2') format('woff2'), url('./static/fonts/BinancePlex-Light.otf') format('opentype');
+      font-weight: 300
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Regular.woff2') format('woff2'), url('./static/fonts/BinancePlex-Regular.otf') format('opentype');
+      font-weight: 400
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Medium.woff2') format('woff2'), url('./static/fonts/BinancePlex-Medium.otf') format('opentype');
+      font-weight: 500
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-SemiBold.woff2') format('woff2'), url('./static/fonts/BinancePlex-SemiBold.otf') format('opentype');
+      font-weight: 600
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Bold.woff2') format('woff2'), url('./static/fonts/BinancePlex-Bold.otf') format('opentype');
+      font-weight: 700
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Bold.woff2') format('woff2'), url('./static/fonts/BinancePlex-Bold.otf') format('opentype');
+      font-weight: 800
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Black.woff2') format('woff2'), url('./static/fonts/BinancePlex-Black.otf') format('opentype');
+      font-weight: 900
+    }
+
+    .body-dark { background-color: #0E0F18; }
+    .body-light { background-color: #fff; }
+    html[theme="light"] .body-dark { background-color: #fff; }
+    html[theme="light"] .body-light { background-color: #fff; }
+    html[theme="dark"] .body-dark  { background-color: #0E0F18; }
+    html[theme="dark"] .body-light { background-color: #0E0F18; }
+
+    .pre-loading-con {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .body-dark .pre-loading-con  { background-color: #0E0F18; }
+    .body-light .pre-loading-con { background-color: #fff; }
+  </style>
+  <script type="module" crossorigin src="./assets/845b7756.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/845b77562.js">
+  <link rel="modulepreload" crossorigin href="./assets/845b77563.js">
+  <link rel="stylesheet" crossorigin href="./assets/845b7756150.css">
+</head>
+
+<body class="body-light">
+  <section style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">
+    
+  </section>
+  <div id="app">
+    
+  </div>
+  <div class="pre-loading-con" id="pre-loading">
+    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="spinner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#5856d6"></stop>
+          <stop offset="20%"  stop-color="#007aff"></stop>
+          <stop offset="40%"  stop-color="#34c759"></stop>
+          <stop offset="60%"  stop-color="#ffcc00"></stop>
+          <stop offset="80%"  stop-color="#ff9500"></stop>
+          <stop offset="100%" stop-color="#ff3b30"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="20" stroke="url(#spinner-grad)" stroke-width="4" fill="none"
+        stroke-dasharray="90 40" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate"
+          from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"></animateTransform>
+      </circle>
+    </svg>
+  </div>
+  <script>
+    let interval = setInterval(() => {
+      pageLoadedCheck()
+    }, 500)
+    pageLoadedCheck()
+    function pageLoadedCheck() {
+      const loaded = sessionStorage.getItem('page_loaded')
+      if (loaded) {
+        const loadingBox = document.querySelector('#pre-loading')
+        if (loadingBox) {
+          if (interval) {
+            clearInterval(interval)
+          }
+          interval = null
+          loadingBox.style.display = 'none'
+          document.body.removeChild(loadingBox)
+        }
+      }
+    }
+  </script>
+  <script>
+    // 动态主题
+    const sunx = localStorage.getItem("sunx");
+    if (sunx) {
+      try {
+        const theme = JSON.parse(sunx).theme;
+        if (theme) {
+          document.body.classList.remove("body-light", "body-dark");
+          document.body.classList.add(`body-${theme}`);
+        }
+      } catch { }
+    }
+
+    // 解析参数
+    const keys = ["inviteCode", "theme"];
+    keys.forEach((item) => {
+      getQueryFromUrl(item);
+    });
+    function getQueryFromUrl(key) {
+      try {
+        if (location.search.includes(key)) {
+          let str = location.search.split(key + "=")[1].split("&")[0];
+          if (
+            str == null ||
+            str == undefined ||
+            str == "null" ||
+            str == "undefined"
+          ) {
+            str = "";
+          }
+          localStorage.setItem(key, decodeURIComponent(str));
+          return decodeURIComponent(str)
+        }
+      } catch {
+        console.error(key + "获取失败");
+      }
+    }
+  </script>
+  <script src="./static/js/iconpark.js?v=0.0.5"></script>
+  <script src="./static/js/qrcode.min.js"></script>
+
+
+<script>
+            console.log("3.11.13  7/30/2026, 4:05:31 PM");
+          </script></body>
+
+</html>

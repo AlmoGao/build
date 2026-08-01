@@ -1,0 +1,1 @@
+import{I as s}from"./845b775627.js";import{I as o,x as t}from"./845b77562.js";import"./845b7756.js";import"./845b77563.js";import"./845b775628.js";import"./845b775629.js";import"./845b775630.js";const m={__name:"AIC",setup:m=>(m,p)=>(t(),o(s,{page:"c"}))};export{m as default};

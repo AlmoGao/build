@@ -1,0 +1,1 @@
+const i={amcoin:{baibeiqianlibi:"百倍の潜在力を持つコイン、あなたの発見を待っています",buzhuomeiyige:"すべての強気市場のシグナルを捉える",jianguanxinxi:"規制情報"},zichan:{youdunqianbaochongzhi:"暗号資産入金",youdunqianbao:"暗号資産"}};export{i as default};

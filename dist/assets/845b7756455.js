@@ -1,0 +1,1 @@
+const a={amcoin:{baibeiqianlibi:"Monedas con un potencial de 100 veces, esperando a ser descubiertas",buzhuomeiyige:"Captura cada señal del mercado alcista",jianguanxinxi:"Información regulatoria"},zichan:{youdunqianbaochongzhi:"Depósito de Criptomonedas",youdunqianbao:"Criptomoneda"}};export{a as default};
