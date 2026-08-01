@@ -1,8 +1,8 @@
 [package]
-name = "Mana"
+name = "AVE"
 version = "3.9.2"
-description = "Mana Desktop Application"
-authors = ["Mana"]
+description = "AVE Desktop Application"
+authors = ["AVE"]
 edition = "2021"
 
 [build-dependencies]
