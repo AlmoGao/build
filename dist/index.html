@@ -10,9 +10,9 @@
   <meta name="renderer" content="webkit" />
 
   <!-- SEO -->
-  <title>ExDemo | bosss.club</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <title>AVE | aveai.cc</title>
+  <meta name="description" content="AVE is a multi-asset trading platform offering forex, cryptocurrency contracts, and commodity markets, designed for traders seeking fast execution, reliable liquidity, and professional trading tools across global markets." />
+  <meta name="keywords" content="forex trading, commodity trading, crypto contracts, multi-asset platform, online trading, financial derivatives, global markets" />
 
   <!-- Mobile -->
   <meta name="mobile-web-app-capable" content="yes" />
@@ -21,37 +21,37 @@
 
   <!-- Open Graph (Facebook/LinkedIn 等) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="ExDemo" />
-  <meta property="og:title" content="ExDemo" />
-  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="AVE" />
+  <meta property="og:title" content="AVE" />
+  <meta property="og:description" content="AVE is a multi-asset trading platform offering forex, cryptocurrency contracts, and commodity markets, designed for traders seeking fast execution, reliable liquidity, and professional trading tools across global markets." />
   <meta property="og:image"
-    content="https://www.bosss.club/main/apple-touch-icon.png?v=3.11.13" />
+    content="https://www.aveai.cc/aurexion/apple-touch-icon.png?v=3.12.21" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta property="og:url" content="https://www.bosss.club" />
+  <meta property="og:url" content="https://www.aveai.cc" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ExDemo" />
-  <meta name="twitter:description" content="" />
+  <meta name="twitter:title" content="AVE" />
+  <meta name="twitter:description" content="AVE is a multi-asset trading platform offering forex, cryptocurrency contracts, and commodity markets, designed for traders seeking fast execution, reliable liquidity, and professional trading tools across global markets." />
   <meta name="twitter:image"
-    content="https://www.bosss.club/main/apple-touch-icon.png?v=3.11.13" />
+    content="https://www.aveai.cc/aurexion/apple-touch-icon.png?v=3.12.21" />
   <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
 
   <!-- ico -->
-  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=3.11.13">
-  <link rel="icon" href="/main/favicon.ico" />
-  <link rel="canonical" href="https://www.bosss.club" />
+  <link rel="apple-touch-icon" href="/aurexion/apple-touch-icon.png?v=3.12.21">
+  <link rel="icon" href="/aurexion/favicon.ico" />
+  <link rel="canonical" href="https://www.aveai.cc" />
 
   <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CryptoExchange",
-    "name": "ExDemo",
-    "url": "https://www.bosss.club",
-    "description": "",
-    "logo": "/main/logo.png",
+    "name": "AVE",
+    "url": "https://www.aveai.cc",
+    "description": "AVE is a multi-asset trading platform offering forex, cryptocurrency contracts, and commodity markets, designed for traders seeking fast execution, reliable liquidity, and professional trading tools across global markets.",
+    "logo": "/aurexion/logo.png",
     "sameAs": [
       "https://twitter.com/",
       "https://www.linkedin.com/",
@@ -59,7 +59,7 @@
     ],
     "founder": {
       "@type": "Organization",
-      "name": "ExDemo"
+      "name": "AVE"
     },
     "acceptedPaymentMethod": ["CryptoCurrency", "BankTransfer"],
     "currenciesAccepted": ["BTC", "ETH", "USDT", "USDC"],
@@ -76,7 +76,7 @@
   </script>
   <script>
     (function () {
-      var envCode = 'main'
+      var envCode = 'aurexion'
       if (['rwa_283'].includes(envCode)) {
         const viewport = document.querySelector('meta[name="viewport"]');
         if (viewport) {
@@ -173,13 +173,35 @@
       font-weight: 900
     }
 
-    .body-dark { background-color: #0E0F18; }
-    .body-light { background-color: #fff; }
-    html[theme="light"] .body-dark { background-color: #fff; }
-    html[theme="light"] .body-light { background-color: #fff; }
-    html[theme="dark"] .body-dark  { background-color: #0E0F18; }
-    html[theme="dark"] .body-light { background-color: #0E0F18; }
+    @keyframes preloadingAni {
+      0% {
+        width: 0;
+      }
 
+      20% {
+        width: 30%;
+      }
+
+      50% {
+        width: 70%;
+      }
+
+      75% {
+        width: 80%;
+      }
+
+      90% {
+        width: 85%;
+      }
+
+      100% {
+        width: 95%;
+      }
+    }
+
+    .body-dark {
+      background-color: #0E0F18;
+    }
     .pre-loading-con {
       position: fixed;
       width: 100%;
@@ -187,44 +209,123 @@
       top: 0;
       left: 0;
       z-index: 999;
+    }
+    .body-dark .pre-loading-con {
+      background-color: #0E0F18;
+    }
+
+    .body-dark .pre-loading .pre-loading-icon img {
+      filter: brightness(0) invert(1);
+    }
+
+    .body-dark .pre-loading-bar {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .body-dark .pre-loading-bar .pre-loading-bar-inner {
+      background-color: #fff;
+    }
+
+    .body-light {
+      background-color: #fff;
+    }
+    .body-light .pre-loading-con {
+      background-color: #fff;
+    }
+
+    .body-light .pre-loading .pre-loading-icon img {
+      filter: brightness(0);
+    }
+
+    .body-light .pre-loading-bar {
+      background-color: #EFF3F8;
+    }
+
+    .body-light .pre-loading-bar .pre-loading-bar-inner {
+      background-color: #0E0F18;
+    }
+
+    .pre-loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 9;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .body-dark .pre-loading-con  { background-color: #0E0F18; }
-    .body-light .pre-loading-con { background-color: #fff; }
+
+    .pre-loading .pre-loading-icon {
+      width: auto;
+      height: 102px;
+      margin-bottom: 60px;
+    }
+
+    .pre-loading .pre-loading-icon img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+    }
+
+    .pre-loading-bar {
+      width: 200px;
+      height: 6px;
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pre-loading-bar .pre-loading-bar-inner {
+      position: absolute;
+      width: 0;
+      height: 6px;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      animation: preloadingAni 8s linear forwards;
+    }
+
+    html[theme="light"] .body-dark {
+      background-color: #fff;
+    }
+
+    html[theme="light"] .body-light {
+      background-color: #fff;
+    }
+
+    html[theme="dark"] .body-dark {
+      background-color: #0E0F18;
+    }
+
+    html[theme="dark"] .body-light {
+      background-color: #0E0F18;
+    }
   </style>
-  <script type="module" crossorigin src="./assets/845b7756.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/845b77562.js">
-  <link rel="modulepreload" crossorigin href="./assets/845b77563.js">
-  <link rel="stylesheet" crossorigin href="./assets/845b7756150.css">
+  <script type="module" crossorigin src="./assets/4d9d2b6f.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/4d9d2b6f2.js">
+  <link rel="modulepreload" crossorigin href="./assets/4d9d2b6f3.js">
+  <link rel="stylesheet" crossorigin href="./assets/4d9d2b6f146.css">
 </head>
 
-<body class="body-light">
+<body class="body-dark">
   <section style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">
-    
+    forex and commodities trading, cryptocurrency derivatives, multi-asset trading platform, professional trading tools, global financial markets, online derivatives trading
   </section>
   <div id="app">
     
   </div>
   <div class="pre-loading-con" id="pre-loading">
-    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="spinner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#5856d6"></stop>
-          <stop offset="20%"  stop-color="#007aff"></stop>
-          <stop offset="40%"  stop-color="#34c759"></stop>
-          <stop offset="60%"  stop-color="#ffcc00"></stop>
-          <stop offset="80%"  stop-color="#ff9500"></stop>
-          <stop offset="100%" stop-color="#ff3b30"></stop>
-        </linearGradient>
-      </defs>
-      <circle cx="24" cy="24" r="20" stroke="url(#spinner-grad)" stroke-width="4" fill="none"
-        stroke-dasharray="90 40" stroke-linecap="round">
-        <animateTransform attributeName="transform" type="rotate"
-          from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"></animateTransform>
-      </circle>
-    </svg>
+    <div class="pre-loading">
+      <div class="pre-loading-icon">
+        <img src="./aurexion/apple-touch-icon.png?v=3.12.21" alt="">
+      </div>
+      <div class="pre-loading-bar">
+        <div class="pre-loading-bar-inner"></div>
+      </div>
+    </div>
   </div>
   <script>
     let interval = setInterval(() => {
@@ -289,7 +390,7 @@
 
 
 <script>
-            console.log("3.11.13  7/30/2026, 4:05:31 PM");
+            console.log("3.12.21  8/1/2026, 3:34:07 PM");
           </script></body>
 
 </html>
