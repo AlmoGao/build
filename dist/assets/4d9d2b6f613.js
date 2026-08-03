@@ -1,1 +1,0 @@
-const e={web3:{caifuyueqian:"Boost your wealth",caifuyueqian2:"with one-click trading",weinizhuanqian:"Make every token profitable for you.",shenfenzhengdeng:"(ID card, driver’s license, passport, etc.)"}};export{e as default};

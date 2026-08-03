@@ -1,1 +1,0 @@
-const i={amcoin:{baibeiqianlibi:"Koin berpotensi 100x menunggu Anda temukan",buzhuomeiyige:"Tangkap setiap sinyal pasar bullish",jianguanxinxi:"Informasi Regulasi"},zichan:{youdunqianbaochongzhi:"Deposit Kripto",youdunqianbao:"Kripto"}};export{i as default};

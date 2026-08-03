@@ -1,0 +1,1 @@
+import"../vue/vue.51dde1f5.js";import{D as e,l as p}from"../@vue/@vue.9900eb55.js";function c(t,o){const n=p(),s=n.appContext.config.globalProperties.$mitt,a=o!=null?o:`update:${n.type.name}`;s.on(a,t),e(()=>s.off(a,t))}export{c as u};

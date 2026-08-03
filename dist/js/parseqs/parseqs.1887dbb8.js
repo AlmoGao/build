@@ -1,0 +1,1 @@
+var o={},s;function c(){return s||(s=1,o.encode=function(n){var e="";for(var r in n)n.hasOwnProperty(r)&&(e.length&&(e+="&"),e+=encodeURIComponent(r)+"="+encodeURIComponent(n[r]));return e},o.decode=function(n){for(var e={},r=n.split("&"),t=0,d=r.length;t<d;t++){var a=r[t].split("=");e[decodeURIComponent(a[0])]=decodeURIComponent(a[1])}return e}),o}export{c as r};
