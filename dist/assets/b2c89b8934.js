@@ -1,0 +1,1 @@
+import{cD as a}from"./b2c89b89.js";import{c as t}from"./b2c89b892.js";const s=()=>({bankList:t(()=>a.state.bankCardList||[]),bankListLoading:t(()=>a.state.bankCardListLoading),updateBankCardList:()=>a.dispatch("updateBankCardList")});export{s as u};
