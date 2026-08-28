@@ -1,1 +1,0 @@
-import{cF as s}from"./b2c89b89.js";import{x as r,y as c,B as t,u as e}from"./b2c89b892.js";const a=["srcset"],o=["src"],u={__name:"AvifImg",props:{src:{type:String,default:""}},setup(u){const l=u;return(u,n)=>(c(),r("picture",null,[t("source",{srcset:e(s)(l.src)},null,8,a),t("img",{src:e(s)(l.src),alt:""},null,8,o)]))}};export{u as _};
