@@ -93,6 +93,7 @@ fn main() {
             .center()
             .maximized(true)
             .initialization_script(&init_script)
+            .devtools(true)
             .build()?;
 
             let win_for_close = win.clone();
@@ -106,7 +107,7 @@ fn main() {
 
             // 开发环境打开 DevTools
             // #[cfg(debug_assertions)] 
-            win.open_devtools();
+            // win.open_devtools();
 
             Ok(())
         })
