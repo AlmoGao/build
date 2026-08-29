@@ -1,1 +1,0 @@
-import{cF as s}from"./acd90090.js";import{v as r,x as c,A as t,u as a}from"./acd900902.js";const e=["srcset"],o=["src"],u={__name:"AvifImg",props:{src:{type:String,default:""}},setup(u){const l=u;return(u,n)=>(c(),r("picture",null,[t("source",{srcset:a(s)(l.src)},null,8,e),t("img",{src:a(s)(l.src),alt:""},null,8,o)]))}};export{u as _};

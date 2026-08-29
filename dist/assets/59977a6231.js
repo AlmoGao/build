@@ -1,0 +1,1 @@
+import{I as a}from"./59977a6227.js";import{I as s,x as o}from"./59977a622.js";import"./59977a62.js";import"./59977a623.js";import"./59977a6228.js";import"./59977a6229.js";import"./59977a6230.js";const t={__name:"AIF",setup:t=>(t,m)=>(o(),s(a,{page:"f"}))};export{t as default};
