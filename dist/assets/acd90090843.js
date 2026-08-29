@@ -1,0 +1,1 @@
+import{cD as a}from"./acd90090.js";import{W as s}from"./acd90090841.js";import{d as t,v as c,x as o,S as r}from"./acd900902.js";import"./acd900903.js";const p={class:"page_cash"},d={__name:"CryptoWallet",setup:d=>(t(()=>{a.dispatch("updateWalletByAccount","contract")}),(a,t)=>(o(),c("div",p,[r(s,{from:"crypto"})])))};export{d as default};

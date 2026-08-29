@@ -1,1 +1,0 @@
-import{cD as c}from"./00ec651c.js";import{W as a}from"./00ec651c841.js";import{d as s,v as t,x as o,S as e}from"./00ec651c2.js";import"./00ec651c3.js";const r={class:"page_cash"},p={__name:"CryptoWallet",setup:p=>(s(()=>{c.dispatch("updateWalletByAccount","contract")}),(c,s)=>(o(),t("div",r,[e(a,{from:"crypto"})])))};export{p as default};
