@@ -2,90 +2,64 @@
 <html lang="" style="overflow: hidden">
 
 <head>
-  <!-- Basic -->
+  <!-- 基础信息 -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta name="renderer" content="webkit" />
 
-  <!-- SEO -->
-  <title>ExDemo | macgamers.info</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
+  <!-- SEO 必备 -->
+  <title>Web3.0 Exchange | Buy/Sell Bitcoin, Ethereum & Altcoins</title>
+  <meta name="description"
+    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients." />
+  <meta name="keywords" content="bitcoin, ethereum, crypto exchange, trading, web3, blockchain" />
 
-  <!-- Mobile -->
+  <!-- 移动端优化 -->
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Open Graph (Facebook/LinkedIn 等) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="ExDemo" />
-  <meta property="og:title" content="ExDemo" />
-  <meta property="og:description" content="" />
-  <meta property="og:image"
-    content="https://www.macgamers.info/main/apple-touch-icon.png?v=3.10.1" />
+  <meta property="og:site_name" content="Web3.0 Exchange" />
+  <meta property="og:title" content="Buy/Sell Bitcoin, Ether and Altcoins | Exchange" />
+  <meta property="og:description"
+    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients" />
+  <meta property="og:image" content="https://www.macgamers.info/main/logo.png" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
   <meta property="og:url" content="https://www.macgamers.info" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ExDemo" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image"
-    content="https://www.macgamers.info/main/apple-touch-icon.png?v=3.10.1" />
+  <meta name="twitter:title" content="Buy/Sell Bitcoin, Ether and Altcoins | Exchange" />
+  <meta name="twitter:description"
+    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients" />
+  <meta name="twitter:image" content="https://www.macgamers.info/main/logo.png" />
   <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
 
-  <!-- ico -->
-  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=3.10.1">
-  <link rel="icon" href="/main/favicon.ico" />
-  <link rel="canonical" href="https://www.macgamers.info" />
+  <!-- 图标 -->
+  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png">
+  <link rel="icon" href="/main/logo.png" />
 
-  <!-- Schema -->
-  <script type="application/ld+json">
+  <!-- Schema.org 结构化数据 -->
+  <!-- <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CryptoExchange",
-    "name": "ExDemo",
-    "url": "https://www.macgamers.info",
-    "description": "",
-    "logo": "/main/logo.png",
+    "@type": "Organization",
+    "name": "Web3.0 Exchange",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.png",
     "sameAs": [
-      "https://twitter.com/",
-      "https://www.linkedin.com/",
-      "https://www.facebook.com/"
-    ],
-    "founder": {
-      "@type": "Organization",
-      "name": "ExDemo"
-    },
-    "acceptedPaymentMethod": ["CryptoCurrency", "BankTransfer"],
-    "currenciesAccepted": ["BTC", "ETH", "USDT", "USDC"],
-    "category": [
-      "crypto exchange",
-      "bitcoin trading",
-      "ethereum trading",
-      "digital asset broker",
-      "binance alternative",
-      "okx alternative",
-      "bybit alternative"
+      "https://twitter.com/yourprofile",
+      "https://www.facebook.com/yourprofile",
+      "https://www.linkedin.com/company/yourprofile"
     ]
   }
-  </script>
+  </script> -->
   <script>
     (function () {
-      if (['rwa_283'].includes('main')) {
-        const viewport = document.querySelector('meta[name="viewport"]');
-        if (viewport) {
-          viewport.setAttribute(
-            'content',
-            'width=1460'
-          );
-        }
-        return
-      }
       var ua = navigator.userAgent.toLowerCase();
       var isMobile = /iphone|ipad|ipod|android|mobile/i.test(ua);
       if (isMobile) {
@@ -100,14 +74,7 @@
         } else {
           parts.unshift('h5');
         }
-        if (!['main', 'icmarkets', 'optitrade', 'web3', 'amcoin', 'sprken'].includes('main')) {
-          parts.shift()
-        }
-        if (location.href.includes('?')) {
-          window.location.href = protocol + parts.join('.') + '?' + location.href.split('?')[1]
-        } else {
-          window.location.href = protocol + parts.join('.')
-        }
+        window.location.href = protocol + parts.join('.')
       }
     })();
   </script>
@@ -239,7 +206,7 @@
     }
 
     .pre-loading .pre-loading-icon {
-      width: auto;
+      width: 102px;
       height: 102px;
       margin-bottom: 60px;
     }
@@ -252,7 +219,7 @@
     }
 
     .pre-loading-bar {
-      width: 200px;
+      width: 155px;
       height: 6px;
       border-radius: 50px;
       position: relative;
@@ -285,18 +252,16 @@
       background-color: #0E0F18;
     }
   </style>
-  <script type="module" crossorigin src="./assets/7efcc770.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/7efcc77095.css">
-<link rel="manifest" href="./manifest.webmanifest"></head>
+  <script type="module" crossorigin src="./assets/6c11ffa5.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/6c11ffa567.css">
+<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 
 <body class="body-dark">
-  <section style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">
-    
-  </section>
+  <div style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;"><h1>bitcoin, ethereum, crypto exchange, trading, web3, blockchain</h1><h2>We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients.</h2>/</div>
   <div id="app">
     <div class="pre-loading">
       <div class="pre-loading-icon">
-        <img src="./main/web-touch-icon.png?v=3.10.1" alt="">
+        <img src="./main/web-touch-icon.png" alt="">
       </div>
       <div class="pre-loading-bar">
         <div class="pre-loading-bar-inner"></div>
@@ -353,7 +318,7 @@
 
 
 <script>
-            console.log("3.10.1  8/29/2026, 1:57:42 PM");
+            console.log("3.4.0  Sat Aug 29 2026 14:50:19 GMT+0800 (China Standard Time)");
           </script></body>
 
 </html>

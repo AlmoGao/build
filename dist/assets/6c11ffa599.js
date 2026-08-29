@@ -1,0 +1,1 @@
+const i={yingshe:{miaoheyue:"オプション",miaoheyuejiaoyi:"オプション取引"},sprken:{jiaoyiquanqiu:"世界で取引",lianjieweilai:"未来につなぐ",jiamishijie:"暗号の世界、自由に探索"},zichan:{youdunqianbaochongzhi:"ウォレットチャージ",youdunqianbao:"ウォレットチャージ"}};export{i as default};
