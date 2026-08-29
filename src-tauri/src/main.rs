@@ -99,7 +99,7 @@ fn main() {
                 }
             });
 
-            #[cfg(debug_assertions)]
+            // #[cfg(debug_assertions)]
             win.open_devtools();
 
             Ok(())
