@@ -1,0 +1,1 @@
+const n={yingshe:{miaoheyue:"CFD/差金決済取引",miaoheyuejiaoyi:"CFD/差金決済取引",heyuezhanghu:"CFD口座"},zichan:{yinhangkachongzhi:"入金",yinhangkachongzhiqinglianxikefu:"少々お待ちください、スタッフサービスに移ります"},tixian:{rengongchongzhi:"入金",zhengzaizhuanrurengong:"少々お待ちください、スタッフサービスに移ります"},gongyong:{rengongchongzhi:"入金",qingshaodengzhengzhuanrur_b201:"少々お待ちください、スタッフサービスに移ります"}};export{n as default};
