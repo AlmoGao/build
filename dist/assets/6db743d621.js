@@ -1,0 +1,1 @@
+const t=t=>null==t||("string"==typeof t&&""===t.trim()||(!(!Array.isArray(t)||0!==t.length)||("object"==typeof t&&!Array.isArray(t)&&0===Object.keys(t).length||(t instanceof Map||t instanceof Set)&&0===t.size)));export{t as i};

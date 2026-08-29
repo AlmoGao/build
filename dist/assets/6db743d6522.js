@@ -1,0 +1,1 @@
+const i={yingshe:{miaoheyue:"Option",miaoheyuejiaoyi:"Négociation d'Options"},okx:{jiaoyiquanqiu:"Trade globally",lianjieweilai:"Connect the future",jiamishijie:"Crypto world, explore freely"}};export{i as default};

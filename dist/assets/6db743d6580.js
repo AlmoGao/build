@@ -1,0 +1,1 @@
+const a={yingshe:{miaoheyue:"Opção",miaoheyuejiaoyi:"Negociação de Opções"},optitrade:{quanqiulingxian:"Plataforma líder global de negociação de ativos digitais",anquangaoxiao:"Seguro e eficiente, aproveite com um clique",baipishu:"Livro branco"}};export{a as default};

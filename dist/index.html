@@ -1,190 +1,271 @@
 <!DOCTYPE html>
-<html lang="en" platform="main">
+<html lang="" style="overflow: hidden">
 
 <head>
-  <!-- 基础信息 -->
+  <!-- Basic -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta name="renderer" content="webkit" />
-  <meta name="theme-color" content="#407EF0">
 
-  <!-- SEO 必备 -->
-  <title>MLM</title>
+  <!-- SEO -->
+  <title>ExDemo | </title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
 
-  <!-- 移动端优化 -->
+  <!-- Mobile -->
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Open Graph (Facebook/LinkedIn 等) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="MLM" />
-  <meta property="og:title" content="" />
+  <meta property="og:site_name" content="ExDemo" />
+  <meta property="og:title" content="ExDemo" />
   <meta property="og:description" content="" />
   <meta property="og:image"
-    content="https://h5.ceos.click/static_main/icon.png?v=1.3.17" />
+    content="https://www.macgamers.click/main/apple-touch-icon.png?v=3.11.15" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta property="og:url" content="./https://h5.ceos.click" />
+  <meta property="og:url" content="https://www.macgamers.click" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="MLM" />
+  <meta name="twitter:title" content="ExDemo" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:image"
-    content="https://h5.ceos.click/static_main/icon.png?v=1.3.17" />
+    content="https://www.macgamers.click/main/apple-touch-icon.png?v=3.11.15" />
   <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
 
-  <!-- 图标 -->
-  <link rel="apple-touch-icon" href="./static_main/icon.png?v=1.3.17">
-  <link rel="icon" href="./static_main/favicon.ico" />
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="./manifest.webmanifest" />
+  <!-- ico -->
+  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=3.11.15">
+  <link rel="icon" href="/main/favicon.ico" />
+  <link rel="canonical" href="https://www.macgamers.click" />
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CryptoExchange",
+    "name": "ExDemo",
+    "url": "https://www.macgamers.click",
+    "description": "",
+    "logo": "/main/logo.png",
+    "sameAs": [
+      "https://twitter.com/",
+      "https://www.linkedin.com/",
+      "https://www.facebook.com/"
+    ],
+    "founder": {
+      "@type": "Organization",
+      "name": "ExDemo"
+    },
+    "acceptedPaymentMethod": ["CryptoCurrency", "BankTransfer"],
+    "currenciesAccepted": ["BTC", "ETH", "USDT", "USDC"],
+    "category": [
+      "crypto exchange",
+      "bitcoin trading",
+      "ethereum trading",
+      "digital asset broker",
+      "binance alternative",
+      "okx alternative",
+      "bybit alternative"
+    ]
+  }
+  </script>
+  <script>
+    (function () {
+      var envCode = 'main'
+      if (['rwa_283'].includes(envCode)) {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+          viewport.setAttribute(
+            'content',
+            'width=1460'
+          );
+        }
+        return
+      }
+      if (
+        ['main'].includes(envCode) ||
+        /mode\d+$/.test(envCode)
+      ) {
+        return
+      }
+      var ua = navigator.userAgent.toLowerCase();
+      var isMobile = /iphone|ipad|ipod|android|mobile/i.test(ua);
+      if (isMobile) {
+        const url = location.origin
+        const match = url.match(/^(\w+:\/\/)([^/]+)$/);
+        if (!match) return url;
+        const protocol = match[1];
+        const host = match[2];
+        const parts = host.split('.');
+        if (parts.length > 2) {
+          parts[0] = 'h5';
+        } else {
+          parts.unshift('h5');
+        }
+        if (!['icmarkets'].includes('main')) {
+          parts.shift()
+        }
+        if (['icmarkets'].includes('main') && ['286'].includes('%VITE_ENV_SUBCODE%')) {
+          parts.shift()
+        }
+        if (location.href.includes('?')) {
+          window.location.href = protocol + parts.join('.') + '?' + location.href.split('?')[1]
+        } else {
+          window.location.href = protocol + parts.join('.')
+        }
+      }
+    })();
+  </script>
   <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      width: 100%;
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Light.woff2') format('woff2'), url('./static/fonts/BinancePlex-Light.otf') format('opentype');
+      font-weight: 200
     }
 
-    div {
-      box-sizing: border-box;
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Light.woff2') format('woff2'), url('./static/fonts/BinancePlex-Light.otf') format('opentype');
+      font-weight: 300
     }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Regular.woff2') format('woff2'), url('./static/fonts/BinancePlex-Regular.otf') format('opentype');
+      font-weight: 400
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Medium.woff2') format('woff2'), url('./static/fonts/BinancePlex-Medium.otf') format('opentype');
+      font-weight: 500
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-SemiBold.woff2') format('woff2'), url('./static/fonts/BinancePlex-SemiBold.otf') format('opentype');
+      font-weight: 600
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Bold.woff2') format('woff2'), url('./static/fonts/BinancePlex-Bold.otf') format('opentype');
+      font-weight: 700
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Bold.woff2') format('woff2'), url('./static/fonts/BinancePlex-Bold.otf') format('opentype');
+      font-weight: 800
+    }
+
+    @font-face {
+      font-family: 'BinancePlex';
+      font-display: swap;
+      src: url('./static/fonts/BinancePlex-Black.woff2') format('woff2'), url('./static/fonts/BinancePlex-Black.otf') format('opentype');
+      font-weight: 900
+    }
+
+    .body-dark { background-color: #0E0F18; }
+    .body-light { background-color: #fff; }
+    html[theme="light"] .body-dark { background-color: #fff; }
+    html[theme="light"] .body-light { background-color: #fff; }
+    html[theme="dark"] .body-dark  { background-color: #0E0F18; }
+    html[theme="dark"] .body-light { background-color: #0E0F18; }
 
     .pre-loading-con {
       position: fixed;
       width: 100%;
       height: 100%;
-      z-index: 999;
       top: 0;
       left: 0;
-      background-color: #fff;
-    }
-
-    .pre-loading {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      z-index: 9;
+      z-index: 999;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-
-    .pre-loading-spinner {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      transform: scale(0.8) rotate(0deg);
-      background:
-        conic-gradient(from 0deg,
-          #f7931a 0deg,
-          #f5c518 90deg,
-          #2ecc71 180deg,
-          #2f7cf6 270deg,
-          rgba(47, 124, 246, 0) 300deg,
-          rgba(247, 147, 26, 0) 360deg);
-      -webkit-mask: radial-gradient(circle, transparent 1.625rem, #000 1.6875rem, #000 1.875rem, transparent 1.9375rem);
-      mask: radial-gradient(circle, transparent 1.625rem, #000 1.6875rem, #000 1.875rem, transparent 1.9375rem);
-      animation: preloadingSpin 1s linear infinite;
-    }
-
-    @keyframes preloadingSpin {
-      to {
-        transform: scale(0.8) rotate(360deg);
-      }
-    }
-
-    @-webkit-keyframes preloadingSpin {
-      to {
-        -webkit-transform: rotate(360deg);
-        transform: scale(0.8) rotate(360deg);
-      }
-    }
-
-    .system-status {
-      position: fixed;
-      top: 0.3125rem;
-      right: 0.3125rem;
-      font-size: 0.75rem;
-      z-index: 99999;
-      opacity: 0.6;
-    }
-
-    .system-status .status-1 {
-      width: 0.75rem;
-      height: 0.75rem;
-      border-radius: 50%;
-      background-color: red;
-    }
-
-    .system-status .status-2 {
-      color: rgb(218, 156, 0);
-    }
-
-    .system-status .status-3 {
-      color: rgb(0, 163, 0);
-    }
+    .body-dark .pre-loading-con  { background-color: #0E0F18; }
+    .body-light .pre-loading-con { background-color: #fff; }
   </style>
+  <script type="module" crossorigin src="./assets/6db743d6.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/6db743d62.js">
+  <link rel="modulepreload" crossorigin href="./assets/6db743d63.js">
+  <link rel="stylesheet" crossorigin href="./assets/6db743d6142.css">
+</head>
+
+<body class="body-dark">
+  <section style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">
+    
+  </section>
+  <div id="app">
+    
+  </div>
+  <div class="pre-loading-con" id="pre-loading">
+    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="spinner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#5856d6"></stop>
+          <stop offset="20%"  stop-color="#007aff"></stop>
+          <stop offset="40%"  stop-color="#34c759"></stop>
+          <stop offset="60%"  stop-color="#ffcc00"></stop>
+          <stop offset="80%"  stop-color="#ff9500"></stop>
+          <stop offset="100%" stop-color="#ff3b30"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="20" stroke="url(#spinner-grad)" stroke-width="4" fill="none"
+        stroke-dasharray="90 40" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate"
+          from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"></animateTransform>
+      </circle>
+    </svg>
+  </div>
   <script>
-    // 兼容兜底：安全 sessionStorage/matchMedia
-    (function () {
-      function getStorage() {
-        try {
-          return window.sessionStorage;
-        } catch (e) {
-          return null;
+    let interval = setInterval(() => {
+      pageLoadedCheck()
+    }, 500)
+    pageLoadedCheck()
+    function pageLoadedCheck() {
+      const loaded = sessionStorage.getItem('page_loaded')
+      if (loaded) {
+        const loadingBox = document.querySelector('#pre-loading')
+        if (loadingBox) {
+          if (interval) {
+            clearInterval(interval)
+          }
+          interval = null
+          loadingBox.style.display = 'none'
+          document.body.removeChild(loadingBox)
         }
       }
-      window.__sessionSafe = {
-        getItem: function (key) {
-          try {
-            var s = getStorage();
-            return s ? s.getItem(key) : null;
-          } catch (e) {
-            return null;
-          }
-        },
-        setItem: function (key, value) {
-          try {
-            var s = getStorage();
-            if (s) s.setItem(key, value);
-          } catch (e) { }
-        },
-        removeItem: function (key) {
-          try {
-            var s = getStorage();
-            if (s) s.removeItem(key);
-          } catch (e) { }
-        },
-        clear: function () {
-          try {
-            var s = getStorage();
-            if (s) s.clear();
-          } catch (e) { }
+    }
+  </script>
+  <script>
+    // 动态主题
+    const sunx = localStorage.getItem("sunx");
+    if (sunx) {
+      try {
+        const theme = JSON.parse(sunx).theme;
+        if (theme) {
+          document.body.classList.remove("body-light", "body-dark");
+          document.body.classList.add(`body-${theme}`);
         }
-      };
-      window.__safeMatchMedia = function (query) {
-        try {
-          if (typeof window.matchMedia !== 'function') return false;
-          return !!window.matchMedia(query).matches;
-        } catch (e) {
-          return false;
-        }
-      };
-    })();
+      } catch { }
+    }
 
     // 解析参数
-    const keys = [
-      "inviteCode"
-    ];
+    const keys = ["inviteCode", "theme"];
     keys.forEach((item) => {
       getQueryFromUrl(item);
     });
@@ -200,103 +281,20 @@
           ) {
             str = "";
           }
-          console.error('邀请码', decodeURIComponent(str))
           localStorage.setItem(key, decodeURIComponent(str));
-        } else if (location.href.includes('?')) {
-          const s = location.href.split('?')[1]
-          if (s) {
-            let str = s.split(key + "=")[1].split("&")[0];
-            if (
-              str == null ||
-              str == undefined ||
-              str == "null" ||
-              str == "undefined"
-            ) {
-              str = "";
-            }
-            console.error('邀请码2', decodeURIComponent(str))
-            localStorage.setItem(key, decodeURIComponent(str));
-          }
+          return decodeURIComponent(str)
         }
-      } catch { }
+      } catch {
+        console.error(key + "获取失败");
+      }
     }
   </script>
-  <script type="module" crossorigin src="./assets/ddad6a78.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/ddad6a7873.js">
-  <link rel="modulepreload" crossorigin href="./assets/ddad6a7875.js">
-  <link rel="modulepreload" crossorigin href="./assets/ddad6a7874.js">
-  <link rel="modulepreload" crossorigin href="./assets/ddad6a782.js">
-  <link rel="stylesheet" crossorigin href="./assets/ddad6a78.css">
-<link rel="manifest" href="./manifest.webmanifest"></head>
+  <script src="./static/js/iconpark.js?v=0.0.5"></script>
+  <script src="./static/js/qrcode.min.js"></script>
 
-<body>
-  <div style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">/</div>
-  <!-- <script src="/fonts/vconsole.min.js"></script>
-  <script>
-    var vConsole = new VConsole();
-  </script> -->
-  <div id="app">
 
-  </div>
-
-  <div class="pre-loading-con" id="pre-loading">
-    <div class="pre-loading">
-      <div class="pre-loading-spinner"></div>
-    </div>
-  </div>
-  <div class="system-status">
-  </div>
-
-  <div id="module"></div>
-
-  <script>
-    (function () {
-      // 每次启动清理旧的 ready 标记，避免刷新时立即命中而出现空白
-      try { window.__sessionSafe && window.__sessionSafe.removeItem('app_loaded') } catch (e) { }
-      var ready = { load: false, app: false }
-      var hidden = false
-      function hidePreLoading() {
-        if (hidden) return
-        var el = document.getElementById('pre-loading')
-        if (el && el.parentNode) {
-          el.style.display = 'none'
-          el.parentNode.removeChild(el)
-        }
-        hidden = true
-      }
-      function tryHide() {
-        if (ready.load && ready.app) hidePreLoading()
-      }
-      // 1. window.load：所有同步 JS/CSS/资源加载完
-      if (document.readyState === 'complete') {
-        ready.load = true
-      } else {
-        window.addEventListener('load', function () {
-          ready.load = true; tryHide()
-        })
-      }
-      // 2. App 首屏挂载完成事件
-      window.addEventListener('app:ready', function () {
-        ready.app = true; tryHide()
-      })
-      // 3. sessionStorage 兜底轮询（兼容已有信号 / 缓存路径）
-      var pollTimer = setInterval(function () {
-        try {
-          if (window.__sessionSafe && window.__sessionSafe.getItem('app_loaded')) {
-            ready.app = true
-            tryHide()
-          }
-        } catch (e) { }
-        if (hidden) {
-          clearInterval(pollTimer); pollTimer = null
-        }
-      }, 200)
-      // 4. 最长 60s 兜底，避免接口异常时白屏
-      setTimeout(hidePreLoading, 60000)
-      // 立即尝试一次
-      tryHide()
-    })()
-  </script>
-<script>console.log("1.3.17 8/29/2026, 12:52:32 PM");</script></body>
+<script>
+            console.log("3.11.15  8/29/2026, 1:22:00 PM");
+          </script></body>
 
 </html>

@@ -1,0 +1,1 @@
+import{cD as s}from"./6db743d6.js";import{W as a}from"./6db743d6775.js";import{e as t,v as o,x as d,S as e}from"./6db743d62.js";import"./6db743d63.js";const m={class:"page_cash"},p={__name:"StockWallet",setup:p=>(t(()=>{s.dispatch("updateStockWallet")}),(s,t)=>(d(),o("div",m,[e(a,{from:"stock"})])))};export{p as default};
