@@ -40,28 +40,56 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-rust-
 
-      # 5. 查看版本
+      # 5. 查看基础环境版本
       - name: Show Environment Versions
         run: |
           node -v
           npm -v
           rustc --version
           cargo --version
-          npm list @tauri-apps/cli --depth=0
 
-      # 6. 安装依赖
+      # 6. 安装 npm 依赖
+      # 严格按照 package-lock.json 安装
       - name: Install npm dependencies
         run: npm ci
 
-      # 7. 查看 Tauri CLI
+      # 7. 检查 Tauri CLI
       - name: Check Tauri CLI
         run: npx tauri --version
 
-      # 8. 直接使用现有 dist 打包
+      # 8. 检查 dist
+      # 不打印全部文件，只检查 index.html 是否存在
+      - name: Check dist
+        shell: powershell
+        run: |
+          if (Test-Path "dist/index.html") {
+            Write-Host "dist/index.html exists"
+          } else {
+            Write-Host "ERROR: dist/index.html NOT FOUND"
+            exit 1
+          }
+
+      # 9. 构建 Tauri
+      # dist 已经提前构建完成，因此不执行 npm run build
       - name: Build Tauri Windows
         run: npm run tauri:build
 
-      # 9. 发布 GitHub Release
+      # 10. 查看最终打包文件
+      - name: List Build Artifacts
+        shell: powershell
+        run: |
+          if (Test-Path "src-tauri/target/release/bundle") {
+            Get-ChildItem `
+              -Path "src-tauri/target/release/bundle" `
+              -Recurse `
+              -File |
+              Select-Object FullName
+          } else {
+            Write-Host "ERROR: bundle directory NOT FOUND"
+            exit 1
+          }
+
+      # 11. 发布 GitHub Release
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
