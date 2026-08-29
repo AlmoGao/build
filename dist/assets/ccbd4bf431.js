@@ -1,0 +1,1 @@
+import{I as s}from"./ccbd4bf428.js";import{J as c,y as b}from"./ccbd4bf42.js";import"./ccbd4bf4.js";import"./ccbd4bf43.js";import"./ccbd4bf429.js";const o={__name:"AIS",setup:o=>(o,t)=>(b(),c(s,{page:"s"}))};export{o as default};

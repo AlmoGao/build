@@ -10,7 +10,7 @@
   <meta name="renderer" content="webkit" />
 
   <!-- SEO -->
-  <title>ExDemo | </title>
+  <title>ExDemo | macgamers.cc</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
 
@@ -25,23 +25,23 @@
   <meta property="og:title" content="ExDemo" />
   <meta property="og:description" content="" />
   <meta property="og:image"
-    content="https://www.macgamers.click/main/apple-touch-icon.png?v=3.11.15" />
+    content="https://www.macgamers.cc/main/apple-touch-icon.png?v=3.11.15" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta property="og:url" content="https://www.macgamers.click" />
+  <meta property="og:url" content="https://www.macgamers.cc" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ExDemo" />
   <meta name="twitter:description" content="" />
   <meta name="twitter:image"
-    content="https://www.macgamers.click/main/apple-touch-icon.png?v=3.11.15" />
+    content="https://www.macgamers.cc/main/apple-touch-icon.png?v=3.11.15" />
   <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
 
   <!-- ico -->
   <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=3.11.15">
   <link rel="icon" href="/main/favicon.ico" />
-  <link rel="canonical" href="https://www.macgamers.click" />
+  <link rel="canonical" href="https://www.macgamers.cc" />
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -49,7 +49,7 @@
     "@context": "https://schema.org",
     "@type": "CryptoExchange",
     "name": "ExDemo",
-    "url": "https://www.macgamers.click",
+    "url": "https://www.macgamers.cc",
     "description": "",
     "logo": "/main/logo.png",
     "sameAs": [
@@ -178,13 +178,35 @@
       font-weight: 900
     }
 
-    .body-dark { background-color: #0E0F18; }
-    .body-light { background-color: #fff; }
-    html[theme="light"] .body-dark { background-color: #fff; }
-    html[theme="light"] .body-light { background-color: #fff; }
-    html[theme="dark"] .body-dark  { background-color: #0E0F18; }
-    html[theme="dark"] .body-light { background-color: #0E0F18; }
+    @keyframes preloadingAni {
+      0% {
+        width: 0;
+      }
 
+      20% {
+        width: 30%;
+      }
+
+      50% {
+        width: 70%;
+      }
+
+      75% {
+        width: 80%;
+      }
+
+      90% {
+        width: 85%;
+      }
+
+      100% {
+        width: 95%;
+      }
+    }
+
+    .body-dark {
+      background-color: #0E0F18;
+    }
     .pre-loading-con {
       position: fixed;
       width: 100%;
@@ -192,17 +214,105 @@
       top: 0;
       left: 0;
       z-index: 999;
+    }
+    .body-dark .pre-loading-con {
+      background-color: #0E0F18;
+    }
+
+    .body-dark .pre-loading .pre-loading-icon img {
+      filter: brightness(0) invert(1);
+    }
+
+    .body-dark .pre-loading-bar {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .body-dark .pre-loading-bar .pre-loading-bar-inner {
+      background-color: #fff;
+    }
+
+    .body-light {
+      background-color: #fff;
+    }
+    .body-light .pre-loading-con {
+      background-color: #fff;
+    }
+
+    .body-light .pre-loading .pre-loading-icon img {
+      filter: brightness(0);
+    }
+
+    .body-light .pre-loading-bar {
+      background-color: #EFF3F8;
+    }
+
+    .body-light .pre-loading-bar .pre-loading-bar-inner {
+      background-color: #0E0F18;
+    }
+
+    .pre-loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 9;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    .body-dark .pre-loading-con  { background-color: #0E0F18; }
-    .body-light .pre-loading-con { background-color: #fff; }
+
+    .pre-loading .pre-loading-icon {
+      width: auto;
+      height: 102px;
+      margin-bottom: 60px;
+    }
+
+    .pre-loading .pre-loading-icon img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+         object-fit: contain;
+    }
+
+    .pre-loading-bar {
+      width: 200px;
+      height: 6px;
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pre-loading-bar .pre-loading-bar-inner {
+      position: absolute;
+      width: 0;
+      height: 6px;
+      border-radius: 50px;
+      top: 0;
+      left: 0;
+      animation: preloadingAni 8s linear forwards;
+    }
+
+    html[theme="light"] .body-dark {
+      background-color: #fff;
+    }
+
+    html[theme="light"] .body-light {
+      background-color: #fff;
+    }
+
+    html[theme="dark"] .body-dark {
+      background-color: #0E0F18;
+    }
+
+    html[theme="dark"] .body-light {
+      background-color: #0E0F18;
+    }
   </style>
-  <script type="module" crossorigin src="./assets/6db743d6.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/6db743d62.js">
-  <link rel="modulepreload" crossorigin href="./assets/6db743d63.js">
-  <link rel="stylesheet" crossorigin href="./assets/6db743d6142.css">
+  <script type="module" crossorigin src="./assets/ccbd4bf4.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ccbd4bf42.js">
+  <link rel="modulepreload" crossorigin href="./assets/ccbd4bf43.js">
+  <link rel="stylesheet" crossorigin href="./assets/ccbd4bf4143.css">
 </head>
 
 <body class="body-dark">
@@ -213,23 +323,14 @@
     
   </div>
   <div class="pre-loading-con" id="pre-loading">
-    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="spinner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#5856d6"></stop>
-          <stop offset="20%"  stop-color="#007aff"></stop>
-          <stop offset="40%"  stop-color="#34c759"></stop>
-          <stop offset="60%"  stop-color="#ffcc00"></stop>
-          <stop offset="80%"  stop-color="#ff9500"></stop>
-          <stop offset="100%" stop-color="#ff3b30"></stop>
-        </linearGradient>
-      </defs>
-      <circle cx="24" cy="24" r="20" stroke="url(#spinner-grad)" stroke-width="4" fill="none"
-        stroke-dasharray="90 40" stroke-linecap="round">
-        <animateTransform attributeName="transform" type="rotate"
-          from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"></animateTransform>
-      </circle>
-    </svg>
+    <div class="pre-loading">
+      <div class="pre-loading-icon">
+        <img src="./main/apple-touch-icon.png?v=3.11.15" alt="">
+      </div>
+      <div class="pre-loading-bar">
+        <div class="pre-loading-bar-inner"></div>
+      </div>
+    </div>
   </div>
   <script>
     let interval = setInterval(() => {
@@ -294,7 +395,7 @@
 
 
 <script>
-            console.log("3.11.15  8/29/2026, 1:22:00 PM");
+            console.log("3.11.15  8/29/2026, 1:30:20 PM");
           </script></body>
 
 </html>

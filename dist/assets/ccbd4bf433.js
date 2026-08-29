@@ -1,0 +1,1 @@
+import{cD as a}from"./ccbd4bf4.js";import{c as t}from"./ccbd4bf42.js";const s=()=>({bankList:t(()=>a.state.bankCardList||[]),bankListLoading:t(()=>a.state.bankCardListLoading),updateBankCardList:()=>a.dispatch("updateBankCardList")});export{s as u};
