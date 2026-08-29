@@ -17,18 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Node.js
+      # 2. 安装 Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      # 3. Rust
+      # 3. 安装 Rust
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      # 4. Rust 缓存
+      # 4. 缓存 Rust
       - name: Cache Rust
         uses: actions/cache@v4
         with:
@@ -40,65 +40,28 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-rust-
 
-      # 5. 查看环境版本
+      # 5. 查看版本
       - name: Show Environment Versions
-        shell: powershell
         run: |
-          Write-Host "===== Node ====="
           node -v
-
-          Write-Host "===== NPM ====="
           npm -v
-
-          Write-Host "===== Rust ====="
           rustc --version
-
-          Write-Host "===== Cargo ====="
           cargo --version
-
-          Write-Host "===== Tauri CLI ====="
           npm list @tauri-apps/cli --depth=0
 
-          Write-Host "===== Check dist ====="
-          if (Test-Path "dist/index.html") {
-            Write-Host "dist/index.html exists"
-          } else {
-            Write-Host "ERROR: dist/index.html NOT FOUND"
-            exit 1
-          }
-
-          Write-Host "===== dist files ====="
-          Get-ChildItem dist -Recurse | Select-Object FullName
-
-      # 6. 严格按照 package-lock.json 安装
+      # 6. 安装依赖
       - name: Install npm dependencies
         run: npm ci
 
-      # 7. 确认 Tauri CLI
+      # 7. 查看 Tauri CLI
       - name: Check Tauri CLI
         run: npx tauri --version
 
-      # 8. 不执行 npm run build
-      # 因为 dist 已经是构建好的 Vue 页面
-      - name: Build Tauri
+      # 8. 直接使用现有 dist 打包
+      - name: Build Tauri Windows
         run: npm run tauri:build
 
-      # 9. 查看打包结果
-      - name: List Build Artifacts
-        shell: powershell
-        run: |
-          Write-Host "===== Bundle ====="
-
-          if (Test-Path "src-tauri/target/release/bundle") {
-            Get-ChildItem `
-              -Path "src-tauri/target/release/bundle" `
-              -Recurse
-          } else {
-            Write-Host "ERROR: bundle directory NOT FOUND"
-            exit 1
-          }
-
-      # 10. 发布 GitHub Release
+      # 9. 发布 GitHub Release
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
