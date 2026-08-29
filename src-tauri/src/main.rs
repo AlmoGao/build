@@ -105,7 +105,7 @@ fn main() {
             });
 
             // 开发环境打开 DevTools
-            #[cfg(debug_assertions)]
+            // #[cfg(debug_assertions)] 
             win.open_devtools();
 
             Ok(())
