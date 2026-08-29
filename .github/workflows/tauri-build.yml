@@ -17,18 +17,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. 安装 Node.js
+      # 2. Node.js
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      # 3. 安装 Rust
+      # 3. Rust
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
 
-      # 4. 缓存 Rust
+      # 4. Rust 缓存
       - name: Cache Rust
         uses: actions/cache@v4
         with:
@@ -40,126 +40,65 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-rust-
 
-      # 5. 输出环境版本
+      # 5. 查看环境版本
       - name: Show Environment Versions
         shell: powershell
         run: |
-          Write-Host "========================================"
-          Write-Host "Node"
-          Write-Host "========================================"
+          Write-Host "===== Node ====="
           node -v
 
-          Write-Host "========================================"
-          Write-Host "NPM"
-          Write-Host "========================================"
+          Write-Host "===== NPM ====="
           npm -v
 
-          Write-Host "========================================"
-          Write-Host "Rust"
-          Write-Host "========================================"
+          Write-Host "===== Rust ====="
           rustc --version
 
-          Write-Host "========================================"
-          Write-Host "Cargo"
-          Write-Host "========================================"
+          Write-Host "===== Cargo ====="
           cargo --version
 
-          Write-Host "========================================"
-          Write-Host "Tauri CLI"
-          Write-Host "========================================"
+          Write-Host "===== Tauri CLI ====="
           npm list @tauri-apps/cli --depth=0
-          if ($LASTEXITCODE -ne 0) {
-            Write-Host "Tauri CLI package not found in node_modules"
-            $LASTEXITCODE = 0
-          }
 
-          Write-Host "========================================"
-          Write-Host "Tauri API"
-          Write-Host "========================================"
-          npm list @tauri-apps/api --depth=0
-          if ($LASTEXITCODE -ne 0) {
-            Write-Host "Tauri API package not found in node_modules"
-            $LASTEXITCODE = 0
-          }
-
-          Write-Host "========================================"
-          Write-Host "package.json"
-          Write-Host "========================================"
-          Get-Content package.json
-
-          Write-Host "========================================"
-          Write-Host "Tauri dependencies in package-lock.json"
-          Write-Host "========================================"
-
-          if (Test-Path package-lock.json) {
-            Select-String `
-              -Path package-lock.json `
-              -Pattern "@tauri-apps/cli|@tauri-apps/api"
+          Write-Host "===== Check dist ====="
+          if (Test-Path "dist/index.html") {
+            Write-Host "dist/index.html exists"
           } else {
-            Write-Host "package-lock.json NOT FOUND"
+            Write-Host "ERROR: dist/index.html NOT FOUND"
+            exit 1
           }
 
-      # 6. 安装 npm 依赖
-      # 严格按照 package-lock.json 安装
+          Write-Host "===== dist files ====="
+          Get-ChildItem dist -Recurse | Select-Object FullName
+
+      # 6. 严格按照 package-lock.json 安装
       - name: Install npm dependencies
         run: npm ci
 
-      # 7. 再次检查实际安装的依赖
-      - name: Verify Dependencies
-        shell: powershell
-        run: |
-          Write-Host "========================================"
-          Write-Host "Installed Tauri CLI"
-          Write-Host "========================================"
-
-          npm list @tauri-apps/cli --depth=0
-
-          Write-Host "========================================"
-          Write-Host "Installed Tauri API"
-          Write-Host "========================================"
-
-          npm list @tauri-apps/api --depth=0
-
-          Write-Host "========================================"
-          Write-Host "Installed packages"
-          Write-Host "========================================"
-
-          npm list --depth=0
-
-      # 8. 检查 Tauri CLI
+      # 7. 确认 Tauri CLI
       - name: Check Tauri CLI
-        shell: powershell
-        run: |
-          Write-Host "Checking Tauri CLI..."
+        run: npx tauri --version
 
-          npx tauri --version
-
-      # 9. 构建 Vue 前端
-      - name: Build Frontend
-        run: npm run build
-
-      # 10. 构建 Tauri Windows
-      - name: Build Tauri Windows
+      # 8. 不执行 npm run build
+      # 因为 dist 已经是构建好的 Vue 页面
+      - name: Build Tauri
         run: npm run tauri:build
 
-      # 11. 查看构建产物
+      # 9. 查看打包结果
       - name: List Build Artifacts
         shell: powershell
         run: |
-          Write-Host "========================================"
-          Write-Host "Tauri Build Output"
-          Write-Host "========================================"
+          Write-Host "===== Bundle ====="
 
           if (Test-Path "src-tauri/target/release/bundle") {
             Get-ChildItem `
               -Path "src-tauri/target/release/bundle" `
               -Recurse
           } else {
-            Write-Host "Tauri bundle directory NOT FOUND"
+            Write-Host "ERROR: bundle directory NOT FOUND"
             exit 1
           }
 
-      # 12. 发布 GitHub Release
+      # 10. 发布 GitHub Release
       - name: Upload to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
