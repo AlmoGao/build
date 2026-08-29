@@ -100,7 +100,8 @@ fn main() {
             });
 
             // #[cfg(debug_assertions)]
-            win.open_devtools();
+            // win.open_devtools();
+            win.webview().open_devtools();
 
             Ok(())
         })
