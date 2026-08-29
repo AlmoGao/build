@@ -1,1 +1,0 @@
-const a={yingshe:{miaoheyue:"Opção",miaoheyuejiaoyi:"Negociação de Opções"},sprken:{jiaoyiquanqiu:"Trade globally",lianjieweilai:"Connect the future",jiamishijie:"Crypto world, explore freely"},zichan:{youdunqianbaochongzhi:"Recarga da carteira",youdunqianbao:"Recarga da carteira"},aurexion:{jianguanwenjian:"Documentos Regulatórios"}};export{a as default};

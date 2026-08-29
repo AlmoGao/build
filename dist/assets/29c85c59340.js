@@ -1,1 +1,0 @@
-const n={amcoin:{baibeiqianlibi:"Münzen mit hundertfachem Potenzial, warten darauf entdeckt zu werden",buzhuomeiyige:"Jedes Bullenmarktsignal erfassen",jianguanxinxi:"Regulierungsinformationen"},zichan:{youdunqianbaochongzhi:"Kryptowährungseinzahlung",youdunqianbao:"Kryptowährung"}};export{n as default};
