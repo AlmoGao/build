@@ -5,7 +5,6 @@ on:
     tags:
       - "v*"
 
-# ⭐ 关键修改：增加写权限，解决 Release 403
 permissions:
   contents: write
 
@@ -14,56 +13,82 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      # 1️⃣ 拉取仓库代码
+      # 1. 拉取仓库代码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # 2️⃣ 缓存 npm
-      - name: Cache npm
-        uses: actions/cache@v3
+      # 2. 安装 Node.js
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 18
+          cache: npm
 
-      # 3️⃣ 缓存 Rust crates
-      - name: Cache Rust crates
-        uses: actions/cache@v3
+      # 3. 安装 Rust
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      # 4. 缓存 Rust
+      - name: Cache Rust
+        uses: actions/cache@v4
         with:
           path: |
             ~/.cargo/registry
             ~/.cargo/git
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+            src-tauri/target
+          key: ${{ runner.os }}-rust-${{ hashFiles('**/Cargo.lock') }}
           restore-keys: |
-            ${{ runner.os }}-cargo-
+            ${{ runner.os }}-rust-
 
-      # 4️⃣ 安装 Node
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+      # 5. 输出环境版本
+      - name: Show Environment Versions
+        shell: powershell
+        run: |
+          Write-Host "===== Node ====="
+          node -v
 
-      # 5️⃣ 安装 Rust（稳定版）
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+          Write-Host "===== NPM ====="
+          npm -v
 
-      # 6️⃣ 安装前端依赖
+          Write-Host "===== Rust ====="
+          rustc --version
+
+          Write-Host "===== Cargo ====="
+          cargo --version
+
+          Write-Host "===== Tauri CLI ====="
+          npm list @tauri-apps/cli --depth=0
+
+          Write-Host "===== Tauri API ====="
+          npm list @tauri-apps/api --depth=0
+
+      # 6. 安装前端依赖
+      # 严格按照 package-lock.json 安装
       - name: Install npm dependencies
-        run: npm install
+        run: npm ci
 
-      # 7️⃣ 安装 Tauri CLI（Node 端）
-      - name: Install Tauri CLI (npm)
-        run: npm install -g @tauri-apps/cli
+      # 7. 构建前端
+      - name: Build Frontend
+        run: npm run build
 
-      # 8️⃣ 构建 Vue3 + Tauri EXE
-      - name: Build Tauri (Windows EXE)
+      # 8. 构建 Tauri Windows
+      # 使用 package.json 中配置的 tauri:build
+      - name: Build Tauri Windows
         run: npm run tauri:build
 
-      # 9️⃣ 发布到 GitHub Release
+      # 9. 查看构建产物
+      - name: List Build Artifacts
+        shell: powershell
+        run: |
+          Write-Host "===== Tauri Bundle ====="
+          Get-ChildItem -Path "src-tauri/target/release/bundle" -Recurse
+
+      # 10. 发布 GitHub Release
       - name: Upload to GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
-          files: src-tauri/target/release/bundle/**/*
+          files: |
+            src-tauri/target/release/bundle/**/*.exe
+            src-tauri/target/release/bundle/**/*.msi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
