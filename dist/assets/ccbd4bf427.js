@@ -1,1 +1,0 @@
-import{I as c}from"./ccbd4bf428.js";import{J as s,y as b}from"./ccbd4bf42.js";import"./ccbd4bf4.js";import"./ccbd4bf43.js";import"./ccbd4bf429.js";const o={__name:"AIC",setup:o=>(o,t)=>(b(),s(c,{page:"c"}))};export{o as default};

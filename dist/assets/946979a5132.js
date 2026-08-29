@@ -1,0 +1,1 @@
+const i={bxcoin:{home1:"<span>極速交易</span> 抓住機遇",home2:"開啟你的數位金融世界",home3:"你的第一站加密貨幣交易所",home4:"簡單上手，輕鬆投資"},yingshe:{miaoheyue:"期權合約",miaoheyuejiaoyi:"期權合約交易"},zichan:{yinhangkachongzhi:"銀行帳戶充值",yinhangkatixian:"銀行帳戶提現",yinhangkatixianqinglianxikefu:"銀行帳戶提現請聯繫客服",yinhangkachongzhiqinglianxikefu:"銀行帳戶充值請聯繫客服"}};export{i as default};

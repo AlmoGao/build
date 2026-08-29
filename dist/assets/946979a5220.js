@@ -1,0 +1,1 @@
+const n={bxcoin:{home1:"<span>高速取引</span> チャンスをつかもう",home2:"デジタル金融の世界を始めよう",home3:"あなたの最初の暗号通貨取引所",home4:"簡単に使えて、気軽に投資"},zichan:{yinhangkachongzhi:"銀行口座入金",yinhangkatixian:"銀行口座出金",yinhangkatixianqinglianxikefu:"銀行口座出金はカスタマーサービスにお問い合わせください",yinhangkachongzhiqinglianxikefu:"銀行口座入金はカスタマーサービスにお問い合わせください"}};export{n as default};
