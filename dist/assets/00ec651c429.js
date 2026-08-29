@@ -1,0 +1,1 @@
+const i={yingshe:{miaoheyue:"Опционы",miaoheyuejiaoyi:"Торговля опционами"},jiaoyi:{yujikuisun:"Убыток",yujiyingli:"Прибыль",yuguyingkuie:"Сумма прибыли/убытка",yuqiyingkuilv:"Процент прибыли/убытка"}};export{i as default};

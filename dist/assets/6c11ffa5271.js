@@ -1,1 +1,0 @@
-import{cZ as a,cH as s,cI as c,cK as o,cJ as d,dD as t}from"./6c11ffa5.js";const e={class:"page-login"},i={class:"page-login-box"},p=a({__name:"Login",setup:a=>(a,p)=>(c(),s("div",e,[o("div",i,[d(t,{static:!0})])]))},[["__scopeId","data-v-d54cd178"]]);export{p as default};

@@ -1,1 +1,0 @@
-const i={yingshe:{miaoheyue:"옵션",miaoheyuejiaoyi:"옵션 거래"},sprken:{jiaoyiquanqiu:"전 세계 거래",lianjieweilai:"미래를 연결하다",jiamishijie:"암호화 세계, 자유롭게 탐험"},zichan:{youdunqianbaochongzhi:"지갑 충전",youdunqianbao:"지갑 충전"}};export{i as default};

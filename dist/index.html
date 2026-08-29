@@ -2,64 +2,124 @@
 <html lang="" style="overflow: hidden">
 
 <head>
-  <!-- 基础信息 -->
+  <!-- Basic -->
   <meta charset="utf-8" />
+  <!-- 错误兜底显示：白屏时直接把报错画到页面上 -->
+<script>
+  (function () {
+    function showErr(msg) {
+      var box = document.getElementById('__err_overlay__');
+      if (!box) {
+        box = document.createElement('div');
+        box.id = '__err_overlay__';
+        box.style.cssText = 'position:fixed;left:0;bottom:0;right:0;max-height:50%;overflow:auto;z-index:999999;' +
+          'background:rgba(200,0,0,.92);color:#fff;font:12px/1.6 monospace;padding:10px;white-space:pre-wrap;word-break:break-all;';
+        (document.body || document.documentElement).appendChild(box);
+      }
+      box.textContent += msg + '\n----------------\n';
+    }
+    window.addEventListener('error', function (e) {
+      if (e.target && (e.target.src || e.target.href)) {
+        showErr('[资源加载失败] ' + (e.target.src || e.target.href));
+      } else {
+        showErr('[JS错误] ' + e.message + ' @ ' + (e.filename || '') + ':' + (e.lineno || ''));
+      }
+    }, true);
+    window.addEventListener('unhandledrejection', function (e) {
+      var r = e.reason;
+      showErr('[Promise未捕获] ' + (r && (r.stack || r.message) || r));
+    });
+  })();
+</script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <meta name="renderer" content="webkit" />
 
-  <!-- SEO 必备 -->
-  <title>Web3.0 Exchange | Buy/Sell Bitcoin, Ethereum & Altcoins</title>
-  <meta name="description"
-    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients." />
-  <meta name="keywords" content="bitcoin, ethereum, crypto exchange, trading, web3, blockchain" />
+  <!-- SEO -->
+  <title>ExDemo | </title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
 
-  <!-- 移动端优化 -->
+  <!-- Mobile -->
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
   <!-- Open Graph (Facebook/LinkedIn 等) -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Web3.0 Exchange" />
-  <meta property="og:title" content="Buy/Sell Bitcoin, Ether and Altcoins | Exchange" />
-  <meta property="og:description"
-    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients" />
-  <meta property="og:image" content="https://www.macgamers.info/main/logo.png" />
+  <meta property="og:site_name" content="ExDemo" />
+  <meta property="og:title" content="ExDemo" />
+  <meta property="og:description" content="" />
+  <meta property="og:image"
+    content="https://www.macgamers.click/main/apple-touch-icon.png?v=4.00.20" />
   <meta property="og:image:width" content="1280" />
   <meta property="og:image:height" content="720" />
-  <meta property="og:url" content="https://www.macgamers.info" />
+  <meta property="og:url" content="https://www.macgamers.click" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Buy/Sell Bitcoin, Ether and Altcoins | Exchange" />
-  <meta name="twitter:description"
-    content="We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients" />
-  <meta name="twitter:image" content="https://www.macgamers.info/main/logo.png" />
+  <meta name="twitter:title" content="ExDemo" />
+  <meta name="twitter:description" content="" />
+  <meta name="twitter:image"
+    content="https://www.macgamers.click/main/apple-touch-icon.png?v=4.00.20" />
   <!-- <meta name="twitter:site" content="@YourTwitterHandle" /> -->
 
-  <!-- 图标 -->
-  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png">
-  <link rel="icon" href="/main/logo.png" />
+  <!-- ico -->
+  <link rel="apple-touch-icon" href="/main/apple-touch-icon.png?v=4.00.20">
+  <link rel="icon" href="/main/favicon.ico" />
+  <link rel="canonical" href="https://www.macgamers.click" />
 
-  <!-- Schema.org 结构化数据 -->
-  <!-- <script type="application/ld+json">
+  <!-- Schema -->
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Web3.0 Exchange",
-    "url": "https://example.com",
-    "logo": "https://example.com/logo.png",
+    "@type": "CryptoExchange",
+    "name": "ExDemo",
+    "url": "https://www.macgamers.click",
+    "description": "",
+    "logo": "/main/logo.png",
     "sameAs": [
-      "https://twitter.com/yourprofile",
-      "https://www.facebook.com/yourprofile",
-      "https://www.linkedin.com/company/yourprofile"
+      "https://twitter.com/",
+      "https://www.linkedin.com/",
+      "https://www.facebook.com/"
+    ],
+    "founder": {
+      "@type": "Organization",
+      "name": "ExDemo"
+    },
+    "acceptedPaymentMethod": ["CryptoCurrency", "BankTransfer"],
+    "currenciesAccepted": ["BTC", "ETH", "USDT", "USDC"],
+    "category": [
+      "crypto exchange",
+      "bitcoin trading",
+      "ethereum trading",
+      "digital asset broker",
+      "binance alternative",
+      "okx alternative",
+      "bybit alternative"
     ]
   }
-  </script> -->
+  </script>
   <script>
     (function () {
+      var envCode = 'main'
+      if (['rwa_283'].includes(envCode)) {
+        const viewport = document.querySelector('meta[name="viewport"]');
+        if (viewport) {
+          viewport.setAttribute(
+            'content',
+            'width=1460'
+          );
+        }
+        return
+      }
+      if (
+        ['main'].includes(envCode) ||
+        /mode\d+$/.test(envCode)
+      ) {
+        return
+      }
       var ua = navigator.userAgent.toLowerCase();
       var isMobile = /iphone|ipad|ipod|android|mobile/i.test(ua);
       if (isMobile) {
@@ -74,7 +134,12 @@
         } else {
           parts.unshift('h5');
         }
-        window.location.href = protocol + parts.join('.')
+        parts.shift()
+        if (location.href.includes('?')) {
+          window.location.href = protocol + parts.join('.') + '?' + location.href.split('?')[1]
+        } else {
+          window.location.href = protocol + parts.join('.')
+        }
       }
     })();
   </script>
@@ -135,139 +200,79 @@
       font-weight: 900
     }
 
-    @keyframes preloadingAni {
-      0% {
-        width: 0;
-      }
+    .body-dark { background-color: #0E0F18; }
+    .body-light { background-color: #fff; }
+    html[theme="light"] .body-dark { background-color: #fff; }
+    html[theme="light"] .body-light { background-color: #fff; }
+    html[theme="dark"] .body-dark  { background-color: #0E0F18; }
+    html[theme="dark"] .body-light { background-color: #0E0F18; }
 
-      20% {
-        width: 30%;
-      }
-
-      50% {
-        width: 70%;
-      }
-
-      75% {
-        width: 80%;
-      }
-
-      90% {
-        width: 85%;
-      }
-
-      100% {
-        width: 95%;
-      }
-    }
-
-    .body-dark {
-      background-color: #0E0F18;
-    }
-
-    .body-dark .pre-loading .pre-loading-icon img {
-      filter: brightness(0) invert(1);
-    }
-
-    .body-dark .pre-loading-bar {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .body-dark .pre-loading-bar .pre-loading-bar-inner {
-      background-color: #fff;
-    }
-
-    .body-light {
-      background-color: #fff;
-    }
-
-    .body-light .pre-loading .pre-loading-icon img {
-      filter: brightness(0);
-    }
-
-    .body-light .pre-loading-bar {
-      background-color: #EFF3F8;
-    }
-
-    .body-light .pre-loading-bar .pre-loading-bar-inner {
-      background-color: #0E0F18;
-    }
-
-    .pre-loading {
+    .pre-loading-con {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      z-index: 9;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-
-    .pre-loading .pre-loading-icon {
-      width: 102px;
-      height: 102px;
-      margin-bottom: 60px;
-    }
-
-    .pre-loading .pre-loading-icon img {
-      width: 100%;
-      height: 100%;
-      -o-object-fit: contain;
-         object-fit: contain;
-    }
-
-    .pre-loading-bar {
-      width: 155px;
-      height: 6px;
-      border-radius: 50px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pre-loading-bar .pre-loading-bar-inner {
-      position: absolute;
-      width: 0;
-      height: 6px;
-      border-radius: 50px;
-      top: 0;
-      left: 0;
-      animation: preloadingAni 8s linear forwards;
-    }
-
-    html[theme="light"] .body-dark {
-      background-color: #fff;
-    }
-
-    html[theme="light"] .body-light {
-      background-color: #fff;
-    }
-
-    html[theme="dark"] .body-dark {
-      background-color: #0E0F18;
-    }
-
-    html[theme="dark"] .body-light {
-      background-color: #0E0F18;
-    }
+    .body-dark .pre-loading-con  { background-color: #0E0F18; }
+    .body-light .pre-loading-con { background-color: #fff; }
   </style>
-  <script type="module" crossorigin src="./assets/6c11ffa5.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/6c11ffa567.css">
-<link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
+  <script type="module" crossorigin src="./assets/00ec651c.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/00ec651c2.js">
+  <link rel="modulepreload" crossorigin href="./assets/00ec651c3.js">
+  <link rel="stylesheet" crossorigin href="./assets/00ec651c147.css">
+</head>
 
 <body class="body-dark">
-  <div style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;"><h1>bitcoin, ethereum, crypto exchange, trading, web3, blockchain</h1><h2>We are a multi-asset regulated, licensed global broker, providing trading services & facilities to both retail & institutional clients.</h2>/</div>
+  <section style="position: fixed;bottom:-100px;right:-100%;opacity: 0;pointer-events: none;">
+    
+  </section>
   <div id="app">
-    <div class="pre-loading">
-      <div class="pre-loading-icon">
-        <img src="./main/web-touch-icon.png" alt="">
-      </div>
-      <div class="pre-loading-bar">
-        <div class="pre-loading-bar-inner"></div>
-      </div>
-    </div>
+    
   </div>
+  <div class="pre-loading-con" id="pre-loading">
+    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="spinner-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%"   stop-color="#5856d6"></stop>
+          <stop offset="20%"  stop-color="#007aff"></stop>
+          <stop offset="40%"  stop-color="#34c759"></stop>
+          <stop offset="60%"  stop-color="#ffcc00"></stop>
+          <stop offset="80%"  stop-color="#ff9500"></stop>
+          <stop offset="100%" stop-color="#ff3b30"></stop>
+        </linearGradient>
+      </defs>
+      <circle cx="24" cy="24" r="20" stroke="url(#spinner-grad)" stroke-width="4" fill="none"
+        stroke-dasharray="90 40" stroke-linecap="round">
+        <animateTransform attributeName="transform" type="rotate"
+          from="0 24 24" to="360 24 24" dur="1s" repeatCount="indefinite"></animateTransform>
+      </circle>
+    </svg>
+  </div>
+  <script>
+    let interval = setInterval(() => {
+      pageLoadedCheck()
+    }, 500)
+    pageLoadedCheck()
+    function pageLoadedCheck() {
+      const loaded = sessionStorage.getItem('page_loaded')
+      if (loaded) {
+        const loadingBox = document.querySelector('#pre-loading')
+        if (loadingBox) {
+          if (interval) {
+            clearInterval(interval)
+          }
+          interval = null
+          loadingBox.style.display = 'none'
+          document.body.removeChild(loadingBox)
+        }
+      }
+    }
+  </script>
   <script>
     // 动态主题
     const sunx = localStorage.getItem("sunx");
@@ -298,18 +303,11 @@
           ) {
             str = "";
           }
-          console.error('邀请码', decodeURIComponent(str))
           localStorage.setItem(key, decodeURIComponent(str));
+          return decodeURIComponent(str)
         }
       } catch {
         console.error(key + "获取失败");
-      }
-    }
-
-    // serviceWorker
-    if (!window.electronAPI) {
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register(`/sw.js?ts=${Date.now()}`)
       }
     }
   </script>
@@ -318,7 +316,7 @@
 
 
 <script>
-            console.log("3.4.0  Sat Aug 29 2026 14:50:19 GMT+0800 (China Standard Time)");
+            console.log("4.00.20  8/29/2026, 3:28:20 PM");
           </script></body>
 
 </html>

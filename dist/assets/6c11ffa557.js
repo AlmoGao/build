@@ -1,1 +1,0 @@
-const i={yingshe:{miaoheyue:"期权",miaoheyuejiaoyi:"期权交易"},sprken:{jiaoyiquanqiu:"交易全球",lianjieweilai:"链接未来",jiamishijie:"加密世界，自由探索"},zichan:{youdunqianbaochongzhi:"钱包充值",youdunqianbao:"钱包充值"}};export{i as default};

@@ -1,0 +1,1 @@
+const i={yingshe:{miaoheyue:"Optionen",miaoheyuejiaoyi:"Optionshandel"},jiaoyi:{yujikuisun:"Verlust",yujiyingli:"Gewinn",yuguyingkuie:"Gewinn/Verlust-Betrag",yuqiyingkuilv:"Gewinn/Verlust-Quote"}};export{i as default};
