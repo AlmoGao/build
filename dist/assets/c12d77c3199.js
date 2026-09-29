@@ -1,0 +1,1 @@
+const i={kyc:{second_description:"請上傳駕駛證/護照/身分證，僅用於身分核實",second_upload_description:"拍攝時確保駕駛證/護照/身分證邊框完整、字跡清晰、亮度均勻"},zichan:{chongzhi_erc20_tip:"請注意：該地址僅接收 {currency}-ERC20 (Ethereum Mainnet) 網路資產。請勿充值任何其他網路的 {currency}（如 BEP20、Arbitrum）。非指定網路充值將導致您的資產永久遺失且無法追回。"},jiaoyi:{maizhang2:"買漲",maidie2:"買跌"}};export{i as default};

@@ -1,0 +1,1 @@
+const a={yingshe:{miaoheyue:"Opsi",miaoheyuejiaoyi:"Perdagangan Opsi"},sprken:{jiaoyiquanqiu:"Perdagangan global",lianjieweilai:"Menghubungkan masa depan",jiamishijie:"Dunia kripto, jelajahi dengan bebas"},zichan:{youdunqianbaochongzhi:"Isi Ulang Dompet",youdunqianbao:"Isi Ulang Dompet"},aurexion:{jianguanwenjian:"Dokumen Regulasi"}};export{a as default};

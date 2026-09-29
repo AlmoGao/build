@@ -1,0 +1,1 @@
+const i={blackrock:{quanqiuzichanzhuanjia:"당신의 글로벌 자산 배분 전문가",jiaoyigengjiandan:"거래를 더 쉽고, 더 가치 있게"},jiaoyi:{xiushizhong:"주문 일시 중지"},kyc:{second_description:"신분증/여권/운전면허증을 업로드해 주세요, 신원 확인용으로만 사용됩니다",first_card_id:"신분증/여권/운전면허증 번호",second_upload_description:"촬영 시 서류 테두리가 완전하고, 글자가 선명하며, 밝기가 균일한지 확인하세요"}};export{i as default};

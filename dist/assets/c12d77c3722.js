@@ -1,0 +1,1 @@
+const a={yingshe:{miaoheyue:"Opsyen",miaoheyuejiaoyi:"Perdagangan Opsyen"},okx:{jiaoyiquanqiu:"Dagangan Global",lianjieweilai:"Sambung Masa Depan",jiamishijie:"Dunia Kripto, Teroka Bebas"}};export{a as default};

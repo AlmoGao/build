@@ -1,0 +1,1 @@
+const e={home:{zhucejijiaoyi:"Inscrivez-vous et tradez, saisissez chaque opportunité"},zichan:{youdunchongzhi:"Recharge automatique"},clox:{querentiaozhuanzhibo:"Confirmez-vous l’ouverture de l’adresse du livestream ?"}};export{e as default};
