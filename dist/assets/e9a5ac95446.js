@@ -1,0 +1,1 @@
+const o={home:{zhucejijiaoyi:"Регистрируйтесь и торгуйте, используйте каждую возможность"},zichan:{youdunchongzhi:"Автоматическое пополнение"},clox:{querentiaozhuanzhibo:"Подтвердить открытие адреса прямой трансляции?"}};export{o as default};

@@ -1,0 +1,1 @@
+const a={home:{zhucejijiaoyi:"Daftar dan berdagang, rebut setiap peluang"},zichan:{youdunchongzhi:"Tambah Nilai Automatik"},clox:{querentiaozhuanzhibo:"Sahkan untuk membuka alamat siaran langsung?"}};export{a as default};
