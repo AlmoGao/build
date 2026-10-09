@@ -1,1 +1,0 @@
-import{ar as t,v as a,x as s,A as o,u as r}from"./7f3766382.js";import{cH as n}from"./7f376638.js";const e={class:"atfx_325_bottom"},i=["innerHTML"],m=n({__name:"Atfx325Bottom",setup(n){const{t:m}=t();return(t,n)=>(s(),a("div",e,[o("div",{class:"container",innerHTML:r(m)("bottom.atfxLegalDisclaimer")},null,8,i)]))}},[["__scopeId","data-v-d370499f"]]);export{m as A};
