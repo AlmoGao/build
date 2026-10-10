@@ -1,8 +1,8 @@
 [package]
-name = "Ex"
+name = "ATFX"
 version = "3.9.2"
-description = "Ex Desktop Application"
-authors = ["Ex"]
+description = "ATFX Desktop Application"
+authors = ["ATFX"]
 edition = "2021"
 
 [build-dependencies]
