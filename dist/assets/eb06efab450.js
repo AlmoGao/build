@@ -1,0 +1,1 @@
+const i={home:{zhucejijiaoyi:"Регистрируйтесь и торгуйте, используйте каждую возможность"},zichan:{youdunchongzhi:"Автоматическое пополнение"},clox:{querentiaozhuanzhibo:"Подтвердить открытие адреса прямой трансляции?"},yingshe:{ico:"IEO"},ico:{ico:"IEO",icodaxin:"Новый IEO",icoguize:"Правила IEO"}};export{i as default};

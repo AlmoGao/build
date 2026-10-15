@@ -1,0 +1,1 @@
+import{cD as a}from"./eb06efab.js";import{W as s}from"./eb06efab37.js";import{d as e,v as o,x as t,S as m}from"./eb06efab2.js";import"./eb06efab3.js";const f={class:"page_cash"},p={__name:"Cash",setup:p=>(e(()=>{a.dispatch("updateWalletByAccount","money")}),(a,e)=>(t(),o("div",f,[m(s,{from:"cash"})])))};export{p as default};

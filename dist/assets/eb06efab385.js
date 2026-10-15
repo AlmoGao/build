@@ -1,0 +1,1 @@
+const e={home:{zhucejijiaoyi:"Registrieren und handeln, nutzen Sie jede Chance"},zichan:{youdunchongzhi:"Automatische Aufladung"},clox:{querentiaozhuanzhibo:"Bestätigen Sie, dass Sie die Live-Stream-Adresse öffnen möchten?"},yingshe:{ico:"IEO"},ico:{ico:"IEO",icodaxin:"IEO-Launch",icoguize:"IEO-Regeln"}};export{e as default};
