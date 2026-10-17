@@ -1,8 +1,8 @@
 [package]
-name = "Ex"
+name = "ExMT5"
 version = "3.9.2"
-description = "Ex Desktop Application"
-authors = ["Ex"]
+description = "ExMT5 Desktop Application"
+authors = ["ExMT5"]
 edition = "2021"
 
 [build-dependencies]

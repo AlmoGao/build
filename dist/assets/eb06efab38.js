@@ -1,1 +1,0 @@
-import{cD as a}from"./eb06efab.js";import{W as s}from"./eb06efab37.js";import{d as e,v as t,x as o,S as c}from"./eb06efab2.js";import"./eb06efab3.js";const f={class:"page_cash"},m={__name:"StockWallet",setup:m=>(e(()=>{a.dispatch("updateWalletByAccount","stock")}),(a,e)=>(o(),t("div",f,[c(s,{from:"stock"})])))};export{m as default};
