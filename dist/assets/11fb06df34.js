@@ -1,1 +1,0 @@
-import{I as f}from"./11fb06df29.js";import{I as s,x as o}from"./11fb06df2.js";import"./11fb06df.js";import"./11fb06df3.js";import"./11fb06df30.js";import"./11fb06df31.js";import"./11fb06df32.js";const t={__name:"AIS",setup:t=>(t,m)=>(o(),s(f,{page:"s"}))};export{t as default};
