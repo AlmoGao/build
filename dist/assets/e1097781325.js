@@ -1,0 +1,1 @@
+const o={home:{zhucejijiaoyi:"登録して取引、あらゆる機会を掴む"},zichan:{youdunchongzhi:"自動チャージ"},clox:{querentiaozhuanzhibo:"ライブ配信のアドレスを開きますか？"},yingshe:{ico:"IEO"},ico:{lotteryEntryTab:"抽選申込",lockedAllocationTab:"ロックアップ割当",ico:"IEO",icodaxin:"IEO新規公開",icoguize:"IEOルール"}};export{o as default};

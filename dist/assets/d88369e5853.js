@@ -1,1 +1,0 @@
-const a={home:{zhucejijiaoyi:"Daftar dan trading, manfaatkan setiap peluang"},zichan:{youdunchongzhi:"Isi Ulang Otomatis"},clox:{querentiaozhuanzhibo:"Konfirmasi untuk membuka alamat siaran langsung?"},yingshe:{ico:"IEO"},ico:{ico:"IEO",icodaxin:"IEO Baharu",icoguize:"Peraturan IEO"}};export{a as default};

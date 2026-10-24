@@ -1,0 +1,1 @@
+const i={home:{zhucejijiaoyi:"Đăng ký và giao dịch, nắm bắt mọi cơ hội"},zichan:{youdunchongzhi:"Nạp tiền tự động"},clox:{querentiaozhuanzhibo:"Confirm to open the live stream address?"},yingshe:{ico:"IEO"},ico:{lotteryEntryTab:"Đăng ký quay số",lockedAllocationTab:"Phân bổ có khóa",ico:"IEO",icodaxin:"IEO Mới",icoguize:"Quy tắc IEO"}};export{i as default};

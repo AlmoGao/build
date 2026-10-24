@@ -1,0 +1,1 @@
+const o={home:{zhucejijiaoyi:"注册即交易，把握每一次机会"},zichan:{youdunchongzhi:"自动充值"},clox:{querentiaozhuanzhibo:"确认打开直播地址？"},yingshe:{ico:"IEO"},ico:{lotteryEntryTab:"免费申购",lockedAllocationTab:"锁仓申购",ico:"IEO",icodaxin:"IEO打新",icoguize:"IEO规则"}};export{o as default};
