@@ -1,1 +1,0 @@
-const e={home:{zhucejijiaoyi:"Inscrivez-vous et tradez, saisissez chaque opportunité"},zichan:{youdunchongzhi:"Recharge automatique"},clox:{querentiaozhuanzhibo:"Confirmez-vous l’ouverture de l’adresse du livestream ?"},yingshe:{ico:"IEO"},ico:{ico:"IEO",icodaxin:"Lancement IEO",icoguize:"Règles IEO"}};export{e as default};

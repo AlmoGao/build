@@ -1,0 +1,1 @@
+import{cJ as t}from"./fdff1135.js";const r=r=>{if(null==r||""===r)return NaN;const e="string"==typeof r?r.trim():r;if("number"==typeof e||"string"==typeof e&&/^-?\d+(\.\d+)?$/.test(e)){const r=Number(e);return t(Math.abs(r)<1e11?1e3*r:r).valueOf()}return t(e).valueOf()},e=(e,f="YYYY/MM/DD")=>{const s=t(r(e));return s.isValid()?s.format(f):"--"};export{e as f,r as p};
