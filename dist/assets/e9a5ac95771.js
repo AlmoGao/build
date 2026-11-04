@@ -1,1 +1,0 @@
-const i={home:{zhucejijiaoyi:"Đăng ký và giao dịch, nắm bắt mọi cơ hội"},zichan:{youdunchongzhi:"Nạp tiền tự động"},clox:{querentiaozhuanzhibo:"Confirm to open the live stream address?"}};export{i as default};

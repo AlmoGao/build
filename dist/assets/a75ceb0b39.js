@@ -1,0 +1,1 @@
+import{cD as a}from"./a75ceb0b.js";import{W as s}from"./a75ceb0b40.js";import{e,v as c,x as o,S as t}from"./a75ceb0b2.js";import"./a75ceb0b3.js";const m={class:"page_cash"},p={__name:"Cash",setup:p=>(e(()=>{a.dispatch("updateWalletByAccount","money")}),(a,e)=>(o(),c("div",m,[t(s,{from:"cash"})])))};export{p as default};

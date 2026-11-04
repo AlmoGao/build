@@ -1,1 +1,0 @@
-const e={home:{zhucejijiaoyi:"Registrieren und handeln, nutzen Sie jede Chance"},zichan:{youdunchongzhi:"Automatische Aufladung"},clox:{querentiaozhuanzhibo:"Bestätigen Sie, dass Sie die Live-Stream-Adresse öffnen möchten?"}};export{e as default};
