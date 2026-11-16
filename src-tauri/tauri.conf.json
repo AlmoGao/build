@@ -26,6 +26,9 @@
       "certificateThumbprint": null,
       "digestAlgorithm": "sha256",
       "timestampUrl": ""
+    },
+    "macOS": {
+      "signingIdentity": "-"
     }
   }
 }
