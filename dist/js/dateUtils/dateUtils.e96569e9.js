@@ -1,0 +1,1 @@
+import{d as r,u as e,t as a}from"../dayjs/dayjs.4b22c848.js";r.extend(e);r.extend(a);r.tz.setDefault("Asia/Shanghai");const m=(t,s="YYYY-MM-DD")=>{if(!t||!t.length||t.length!==2)return"";const n=r(t[0]).format(s),o=r(t[1]).format(s);return`${n} ~ ${o}`},Y=(t,s="YYYY-MM-DD HH:mm:ss")=>t?r(t).format(s):"--";export{m as a,Y as f};

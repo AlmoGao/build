@@ -1,1 +1,0 @@
-const n={yingshe:{miaoheyue:"Option",miaoheyuejiaoyi:"Optionshandel"},sprken:{jiaoyiquanqiu:"Global handeln",lianjieweilai:"Die Zukunft verbinden",jiamishijie:"Krypto-Welt, frei erkunden"},zichan:{youdunqianbaochongzhi:"Wallet-Aufladung",youdunqianbao:"Wallet-Aufladung"},aurexion:{jianguanwenjian:"Regulierungsdokumente"}};export{n as default};

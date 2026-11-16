@@ -1,1 +1,0 @@
-const i={yingshe:{miaoheyue:"Options",miaoheyuejiaoyi:"Négociation d’options"},jiaoyi:{yujikuisun:"Perte",yujiyingli:"Profit",yuguyingkuie:"Montant du Profit/Perte",yuqiyingkuilv:"Taux de Profit/Perte"}};export{i as default};
