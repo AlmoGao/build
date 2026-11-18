@@ -22,6 +22,17 @@ npm ci
 
 已经安装 Command Line Tools 时，无需重复安装。构建使用现有的 `dist/` 前端文件；发布前确认它是准备分发的版本。
 
+### 前端更新与窗口适配
+
+这个仓库的安装包使用 `src-tauri/tauri.conf.json` 中 `frontendDist: "../dist"` 指定的本地文件。`npm run tauri:build`、DMG 命令和 Windows CI 都不会编译或复制 `vueadmin` 源码。更新前端时，先在对应 `vueadmin` 项目执行正确环境的前端构建，再将产物 `dist/admin/` **目录内的文件**同步到本仓库 `dist/`；确认 `dist/index.html` 是目标版本后再打包。只修改 `vueadmin/src/`、`.env` 或 `vueadmin/electron/` 不会自动进入本仓库生成的安装包。
+
+窗口适配由 `src-tauri/src/auto_scale.rs` 统一处理：设计宽度默认 `1600px`，客户区逻辑宽度小于它时按 `逻辑宽度 / 1600` 等比例缩小，达到或超过它时恢复 `100%`。逻辑宽度由物理客户区宽度除以系统 DPI 倍率得到，窗口边框不参与计算；初始化、页面加载完成、调整窗口大小和跨不同 DPI 屏幕时都会重新应用。复用到其他后台时修改 `DEFAULT_DESIGN_WIDTH`，并与前端最小布局宽度保持一致。
+
+Windows、Linux 和 macOS 11+ 使用原生 WebView 页面缩放，弹窗、下拉菜单及 `vh/vw` 布局统一参与缩放。原生缩放启用时，启动脚本会注入 `window.electronAPI.autoScale = true`；前端适配代码应据此跳过自己的整体缩放，不能仅凭 `isElectron` 判断，因为该字段也用于兼容 Tauri。
+
+旧版 macOS（11 以下）或系统版本识别失败时不会调用不受支持的原生页面缩放 API，并注入 `autoScale = false`，交由最新前端产物中的适配逻辑处理。现有 macOS 最低系统支持范围保持不变。
+
+
 ### 改名与图标
 
 如需更换应用名称和图标，先替换根目录的 `logo.png`，再运行：

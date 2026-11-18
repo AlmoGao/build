@@ -4,7 +4,9 @@
 use hmac::{Hmac, Mac};
 use sha2::{Digest, Sha256};
 use std::process::Command;
-use tauri::{WebviewUrl, WebviewWindowBuilder, WindowEvent};
+use tauri::{webview::PageLoadEvent, WebviewUrl, WebviewWindowBuilder, WindowEvent};
+
+mod auto_scale;
 
 const DEVICE_HMAC_SECRET: &[u8] = b"X7mK9pQ2dL4a";
 
@@ -66,12 +68,17 @@ fn get_device_id() -> String {
 fn main() {
     let device_id = get_device_id();
     let dev_hash = device_hash(&device_id);
+    let native_auto_scale = auto_scale::native_zoom_supported();
+    let auto_scale =
+        auto_scale::AutoScale::new(auto_scale::DEFAULT_DESIGN_WIDTH, native_auto_scale)
+            .expect("valid desktop design width");
     eprintln!("[device-id]   {}", device_id);
     eprintln!("[device-hash] {}", dev_hash);
 
     // 在页面任何 JS 之前注入 window.electronAPI，使复用 vueadmin 的前端代码无需修改
     let init_script = format!(
-        "window.electronAPI = {{ isElectron: true, deviceId: \"{}\", deviceHash: \"{}\" }};",
+        "window.electronAPI = {{ isElectron: true, autoScale: {}, deviceId: \"{}\", deviceHash: \"{}\" }};",
+        native_auto_scale,
         device_id.replace('"', ""),
         dev_hash.replace('"', "")
     );
@@ -88,7 +95,14 @@ fn main() {
                 .center()
                 .maximized(true)
                 .initialization_script(&init_script)
+                .on_page_load(move |window, payload| {
+                    if matches!(payload.event(), PageLoadEvent::Finished) {
+                        auto_scale.refresh(&window);
+                    }
+                })
                 .build()?;
+
+            auto_scale.attach(&win);
 
             // 拦截窗口关闭：隐藏而不是销毁，避免重新激活时白屏
             let win_for_close = win.clone();
