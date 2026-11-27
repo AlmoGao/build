@@ -1,0 +1,1 @@
+const a={web3:{caifuyueqian:"Lonjakan Kekayaan",caifuyueqian2:"Bermula dengan satu klik perdagangan",weinizhuanqian:"Biarkan setiap token menghasilkan wang untuk anda",shenfenzhengdeng:"(KAD Pengenalan, Lesen Memandu, Pasport, dll)"}};export{a as default};

@@ -1,0 +1,1 @@
+const i={blackrock:{quanqiuzichanzhuanjia:"あなたのグローバル資産配分の専門家",jiaoyigengjiandan:"取引をもっと簡単に、もっと価値あるものに"},jiaoyi:{xiushizhong:"注文一時停止"},kyc:{second_description:"身分証明書/パスポート/運転免許証をアップロードしてください、本人確認のみに使用されます",first_card_id:"身分証明書/パスポート/運転免許証番号",second_upload_description:"撮影時には、書類の枠が完全で、文字が鮮明で、明るさが均一であることを確認してください"}};export{i as default};

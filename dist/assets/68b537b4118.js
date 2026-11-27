@@ -1,0 +1,1 @@
+const i={blackrock:{quanqiuzichanzhuanjia:"您的全球资产配置专家",jiaoyigengjiandan:"让交易，更简单，更值得"},gongyong:{qingshurunindeyaoqingma:"请输入您的授权码",yaoqingma:"授权码"},pc:{yaoqingmacuowu:"授权码错误"},jiaoyi:{xiushizhong:"暂停下单"},kyc:{second_description:"请上传身份证/护照/驾照，仅用于身份核实",first_card_id:"身份证/护照/驾照号码",second_upload_description:"拍摄时确保证件边框完整、字迹清晰、亮度均匀"}};export{i as default};

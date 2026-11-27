@@ -1,0 +1,1 @@
+const a={yingshe:{miaoheyue:"期权",miaoheyuejiaoyi:"期权交易",dazongshangpin:"贵金属",dazongjiaoyidingdan:"贵金属交易订单",dazongzhanghu:"贵金属账户",dazongzichan:"贵金属资产",dazongyue:"贵金属余额",dazongshangpinjiaoyi:"贵金属交易"},coinbase:{falvzeren:"法律责任",fanxiqianzhengce:"反洗钱政策",lianxifangshi:"联系方式"}};export{a as default};

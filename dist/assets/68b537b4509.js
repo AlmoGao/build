@@ -1,0 +1,1 @@
+const e={web3:{caifuyueqian:"Увеличьте свое богатство",caifuyueqian2:"торгуя в один клик",weinizhuanqian:"Сделайте каждый токен прибыльным для себя.",shenfenzhengdeng:"(удостоверение личности, водительское удостоверение, паспорт и др.)"}};export{e as default};

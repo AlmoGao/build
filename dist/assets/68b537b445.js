@@ -1,0 +1,1 @@
+const i={amcoin:{baibeiqianlibi:"100x potential coins waiting for you to discover",buzhuomeiyige:"Capture every bull market signal",jianguanxinxi:"Regulatory Information"},zichan:{youdunqianbaochongzhi:"Cryptocurrency Deposit",youdunqianbao:"Cryptocurrency"}};export{i as default};
